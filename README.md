@@ -1,5 +1,31 @@
 # Project: G-Events Locator
 
+## GitHub Workflow
+
+Individual branches:
+
+- git checkout -b MM-my-branch
+
+- git push and commit to this branch
+
+- make a pull request, slack a team member to merge
+
+- slack team after merge, update master
+
+Deleting a branch:
+
+- git branch -d MM-my-branch
+
+Changing branches:
+
+- git checkout MM-branch-name
+
+Show Branches:
+
+- git branch
+
+
+
 ## Team
 
 -- Jasen Hill
