@@ -2,7 +2,7 @@
 
 ## Team Members
 
-Jasen Hill, Michael Smith, Owen Black, Michael Marlow
+Jasen Hill, Michael Smith, Owen Black, Michael Marlow, Roberto Santos
 
 ## Project Description
 

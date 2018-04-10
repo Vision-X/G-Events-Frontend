@@ -10,6 +10,8 @@
 
 -- Owen Black
 
+-- Roberto Santos
+
 ## Technologies
 
 ### Front-End:
