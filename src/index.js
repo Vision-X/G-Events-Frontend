@@ -1,8 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import EventsPage from './EventsPage.jsx';
+import MapsPage from './MapsPage.jsx';
+import Home from './Home.jsx';
+
+import './index.css';
+
+ReactDOM.render(
+  <Router>
+    <div>
+      <Route exact path="/" component={ Home } />
+      <Route path="/events" component={ EventsPage } />
+      <Route path="/maps" component={ MapsPage } />
+    </div>
+  </Router>,
+document.getElementById('root'));
 registerServiceWorker();
