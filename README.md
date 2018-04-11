@@ -59,3 +59,5 @@ Show Branches:
 5) Cheerio.js
 
 ## Summary
+
+deployed at https://g-events-locator.firebaseapp.com/
