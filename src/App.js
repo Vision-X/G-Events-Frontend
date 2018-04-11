@@ -32,14 +32,6 @@ class App extends Component {
     return (
       <HashRouter>
         <div className="App" onClick={this._onClick}>
-          <Header />
-            <div className="content">
-              {/*    <EventButton />
-              <Route exact path="/" component={Home} />
-              <Route path="/events" component={EventsPage} />
-              <Route path="/maps" component={MapsPage} />
-              // <MapButton /> */}
-            </div>
         </div>
       </HashRouter>
     );

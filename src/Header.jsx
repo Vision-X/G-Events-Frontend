@@ -9,6 +9,7 @@ class Header extends Component {
         <ul>
           <li><NavLink to="/events">Events</NavLink></li>
           <li><NavLink to="/maps">Maps</NavLink></li>
+          <li><NavLink to="/">Home</NavLink></li>
         </ul>
       </header>
     );
