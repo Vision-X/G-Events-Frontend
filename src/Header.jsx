@@ -7,9 +7,9 @@ class Header extends Component {
       <header>
         <h1>G-Events Locator</h1>
         <ul>
+          <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="/events">Events</NavLink></li>
           <li><NavLink to="/maps">Maps</NavLink></li>
-          <li><NavLink to="/">Home</NavLink></li>
         </ul>
       </header>
     );

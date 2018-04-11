@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, NavLink, HashRouter } from 'react-router-dom';
-import './App.css';
-import Header from './Header.jsx';
-import EventButton from './EventButton.jsx';
-import MapButton from './MapButton.jsx';
-import EventsPage from './EventsPage.jsx';
-import MapsPage from './MapsPage.jsx';
-import Home from './Home.jsx';
+// import './App.css';
+// import Header from './Header.jsx';
+// import EventButton from './EventButton.jsx';
+// import MapButton from './MapButton.jsx';
+// import EventsPage from './EventsPage.jsx';
+// import MapsPage from './MapsPage.jsx';
+// import Home from './Home.jsx';
 
 
 class App extends Component {
