@@ -4,14 +4,6 @@ import { NavLink } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      // <header>
-      //   <h1>G-Events Locator</h1>
-      //   <ul>
-      //     <li><NavLink to="/">Home</NavLink></li>
-      //     <li><NavLink to="/events">Events</NavLink></li>
-      //     <li><NavLink to="/maps">Maps</NavLink></li>
-      //   </ul>
-      // </header>
       <header>
         <nav className="navbar">
           <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -24,6 +16,11 @@ class Header extends Component {
               <h3>Events Locator</h3>
             </div>
           </nav>
+          <ul>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/events">Events</NavLink></li>
+            <li><NavLink to="/maps">Maps</NavLink></li>
+          </ul>
         </nav>
       </header>
     );

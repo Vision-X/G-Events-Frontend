@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink, HashRouter } from 'react-router-dom';
-// import './App.css';
-// import Header from './Header.jsx';
-// import EventButton from './EventButton.jsx';
-// import MapButton from './MapButton.jsx';
-// import EventsPage from './EventsPage.jsx';
-// import MapsPage from './MapsPage.jsx';
-// import Home from './Home.jsx';
+import { HashRouter } from 'react-router-dom';
 
 
 class App extends Component {
@@ -20,12 +13,6 @@ class App extends Component {
 
   _onClick(event) {
     event.preventDefault();
-    if (event.target.innerText === 'EVENTS') {
-      console.log("clickkkkk, ayeeeeee");
-    }
-    if (event.target.innerText === 'MAPS') {
-      console.log("noseddddddddd");
-    }
   }
 
   render() {

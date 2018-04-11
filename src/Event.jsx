@@ -4,6 +4,8 @@ class Event extends Component {
   render() {
     let eventInfo;
     // console.log(data, "fack");
+    //REMEMBER: BR and HR are causing issues with React Render
+    //ALSO: 'day' key in data object is Captial (Day), should be lowercase
     return (
       <div className="event-detail-card content">
         <div className="grid grid--gutters title-block">
