@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import './App.css';
+import { HashRouter } from 'react-router-dom';
+
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+
+    }
+    this._onClick = this._onClick.bind(this);
+  }
+
+  _onClick(event) {
+    event.preventDefault();
+  }
+
   render() {
     return (
-      <div className="App">
-        <h1>Hello!!!!</h1>
-      </div>
+      <HashRouter>
+        <div className="App" onClick={this._onClick}>
+        </div>
+      </HashRouter>
     );
   }
 }
