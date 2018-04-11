@@ -4,23 +4,89 @@ body {
   font-family: sans-serif;
 }
 
-div Header {
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  max-width: 100vw;
-  height: 120px;
-  text-align: center;
-}
-
 div h1 {
   margin: 0;
   font-size: 2rem;
   color: orange;
 }
 
+.content, .nav {
+  max-width: 80vw;
+}
+
+button.landing {
+  width: 80vw;
+  background-color: #003B4C;
+  color: #F79020;
+  min-height: 30vh;
+  font-size: 220%;
+}
+
+.navbar, .navbar a {
+  background-color: #003B4C;
+  color: #F79020;
+}
+
+button.landing:hover {
+  background-color: #F79020;
+  color: #003B4C;
+}
+
+button.landing:active {
+  background-color: #F79020;
+  color: #003B4C;
+}
+
+
+.landing-btns {
+  margin: 2rem 1rem;
+  width: 80vw;
+}
+
+/* floors selection */
+.floors {
+  background: #f3efef;
+  text-align: center;
+  /* font-family: 'fontello'; */
+  height: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: scale(1.25);
+  margin: 20px 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 1.8;
+  font-size: 24px;
+  color: #F79020;
+  text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+  text-decoration: none;
+  /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3)); */
+  /* background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3)); */
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 10px 10px 15px #e3e3e3, -10px 10px 15px #e3e3e3, -15px -15px 15px rgba(255, 255, 255, 0.4), 15px -15px 15px rgba(255, 255, 255, 0.4), inset 0px 2px 0px #fff;
+  -webkit-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -moz-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+
+}
+.button.active {
+  color: #003B4C;
+  text-shadow: 0px 0px 7px #003B4C;
+  background-color: #F79020;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #e3e3e3), color-stop(100%, #f4f4f4));
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15), 10px 10px 15px rgba(255, 255, 255, 0.4), -10px 10px 15px rgba(255, 255, 255, 0.4), -10px -10px 15px #e3e3e3, 10px -10px 15px #e3e3e3, inset 0px -3px 0px rgba(255, 255, 255, 0.4), inset 0px 3px 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/*
 div h2 {
   font-size: 1.4rem;
 }
@@ -32,6 +98,7 @@ div h2 {
   margin: 1rem 20%;
   padding: 1rem;
   max-width: 60%;
+  text-align: center;
 }
 
 #event-btn-component button,
@@ -46,4 +113,4 @@ div h2 {
   flex-direction: column;
   justify-content: space-around;
 
-}
+} */

@@ -3,6 +3,9 @@ import Header from './Header.jsx';
 
 class EventsPage extends Component {
 
+  getEvents() {
+    
+  }
 
   render() {
     return (
