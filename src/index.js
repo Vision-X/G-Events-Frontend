@@ -9,8 +9,6 @@ import EventsPage from './EventsPage.jsx';
 import MapsPage from './MapsPage.jsx';
 import Home from './Home.jsx';
 
-import './index.css';
-
 ReactDOM.render(
   <Router>
     <div>
