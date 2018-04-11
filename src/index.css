@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -25,6 +30,7 @@ button.landing {
 .navbar, .navbar a {
   background-color: #003B4C;
   color: #F79020;
+  margin: auto !important;
 }
 
 button.landing:hover {
@@ -49,11 +55,6 @@ button.landing:active {
   text-align: center;
   /* font-family: 'fontello'; */
   height: 100%;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
 }
 
 .button {

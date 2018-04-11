@@ -8,9 +8,9 @@ class MapButton extends Component {
       //   <h2>Map of the building</h2>
       //   <Link to="/maps"><button type="button" to="/maps">MAPS</button></Link>
       // </div>
-      <Link to="/events">
+      <Link to="/maps">
         <div className="landing-btns mx-auto">
-            <button type="button" class="landing btn-lg btn-primary">FLOOR MAP</button>
+            <button type="button" className="landing btn-lg btn-primary">FLOOR MAP</button>
         </div>
     </Link>
     );
