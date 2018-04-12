@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
+import MapNav from './MapNav.jsx';
 
 class MapsPage extends Component {
 
@@ -8,6 +9,7 @@ class MapsPage extends Component {
     return (
       <div>
         <Header />
+        <MapNav />
         <h3>nada bruh????</h3>
       </div>
     )
