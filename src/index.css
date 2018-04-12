@@ -121,3 +121,15 @@ ul {
   justify-content: space-around;
   width: 400px;
 }
+
+.map-container {
+  height: 350px;
+  text-align: center;
+  width: 100%;
+}
+
+.map-container img {
+  height: 500px;
+  margin-top: 1rem;
+  width: 60%;
+}
