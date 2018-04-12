@@ -11,9 +11,10 @@ class EventsPage extends Component {
   }
 
   getEvents() {
-    const url = "https://g-events-api.herokuapp.com/";
+    const url = "https://g-events-api.herokuapp.com/events";
     let dataGrab = (response) => {
       this.setState({data: response});
+      console.log(response);
     };
     return fetch(url)
           .then(response => response.json())
@@ -36,7 +37,7 @@ class EventsPage extends Component {
                   <div className="event-detail-block">
                     <div className="box">
                       <h4 className="month">{eventInfo.month}</h4>
-                      <h6 className="day">{eventInfo.Day}</h6>
+                      <h6 className="day">{eventInfo.day}</h6>
                     </div>
                   </div>
                   <div className="grid-cell">
