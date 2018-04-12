@@ -129,7 +129,7 @@ ul {
 }
 
 .map-container img {
-  height: 500px;
+  min-height: 500px;
   margin-top: 1rem;
-  width: 60%;
+  max-width: 60%;
 }
