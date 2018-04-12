@@ -14,7 +14,6 @@ class EventsPage extends Component {
     const url = "https://g-events-api.herokuapp.com/events";
     let dataGrab = (response) => {
       this.setState({data: response});
-      console.log(response);
     };
     return fetch(url)
           .then(response => response.json())
