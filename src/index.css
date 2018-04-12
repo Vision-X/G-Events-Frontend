@@ -19,9 +19,22 @@ div h1 {
   max-width: 80vw;
 }
 
-button.landing {
+.basic-button {
   background-color: #003B4C;
   color: #F79020;
+}
+
+.basic-button:hover {
+  background-color: #F79020;
+  color: #003B4C;
+}
+
+.basic-button:active {
+  background-color: #F79020;
+  color: #003B4C;
+}
+
+button.landing {
   font-size: 220%;
   min-height: 30vh;
   width: 80vw;
@@ -33,10 +46,7 @@ button.landing {
   margin: auto !important;
 }
 
-button.landing:hover {
-  background-color: #F79020;
-  color: #003B4C;
-}
+
 
 button.landing:active {
   background-color: #F79020;

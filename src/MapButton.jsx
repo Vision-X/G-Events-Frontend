@@ -6,7 +6,7 @@ class MapButton extends Component {
     return (
       <Link to="/maps">
         <div className="landing-btns mx-auto">
-            <button type="button" className="landing btn-lg btn-primary">FLOOR MAP</button>
+            <button type="button" className="landing btn-lg btn-primary basic-button">FLOOR MAP</button>
         </div>
     </Link>
     );
