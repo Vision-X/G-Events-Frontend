@@ -15,7 +15,8 @@ div h1 {
   margin: 0;
 }
 
-.content, .nav {
+.content,
+.nav {
   max-width: 80vw;
 }
 
@@ -34,25 +35,35 @@ div h1 {
   color: #003B4C;
 }
 
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3px;
+  width: 100vw;
+}
+
+.map-button {
+  font-size: 150%;
+  width: 33%;
+}
+
 button.landing {
   font-size: 220%;
   min-height: 30vh;
   width: 80vw;
 }
 
-.navbar, .navbar a {
+.navbar,
+.navbar a {
   background-color: #003B4C;
   color: #F79020;
   margin: auto !important;
 }
 
-
-
 button.landing:active {
   background-color: #F79020;
   color: #003B4C;
 }
-
 
 .landing-btns {
   margin: 2rem 1rem;
@@ -60,6 +71,7 @@ button.landing:active {
 }
 
 /* floors selection */
+
 .floors {
   background: #f3efef;
   height: 100%;
@@ -67,8 +79,8 @@ button.landing:active {
 }
 
 .button {
-  -moz-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
-  -webkit-transition: box-shadow 0.3s ease-in-out,  background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -moz-transition: box-shadow 0.3s ease-in-out, background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
+  -webkit-transition: box-shadow 0.3s ease-in-out, background-image 0.3s ease-in-out, text-shadow 0.5s linear, color 0.5s linear;
   -webkit-transform: scale(1.25);
   border-radius: 100px;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25), 10px 10px 15px #e3e3e3, -10px 10px 15px #e3e3e3, -15px -15px 15px rgba(255, 255, 255, 0.4), 15px -15px 15px rgba(255, 255, 255, 0.4), inset 0px 2px 0px #fff;
@@ -84,8 +96,8 @@ button.landing:active {
   /* background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e3e3e3)); */
   vertical-align: middle;
   width: 40px;
-
 }
+
 .button.active {
   color: #003B4C;
   text-shadow: 0px 0px 7px #003B4C;
