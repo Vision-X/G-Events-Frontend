@@ -10,7 +10,6 @@ class MapsPage extends Component {
       <div>
         <Header />
         <MapNav />
-        <h3>nada bruh????</h3>
       </div>
     )
   }
