@@ -6,12 +6,19 @@
 body {
   font-family: sans-serif;
   margin: 0;
+  margin-top: 8rem;
   padding: 0;
 }
 
 div h1 {
   color: orange;
   font-size: 2rem;
+  margin: 0;
+}
+
+.title {
+  color: orange;
+  font-size: 1.4rem;
   margin: 0;
 }
 
@@ -35,16 +42,19 @@ div h1 {
   color: #003B4C;
 }
 
-.btn-group {
+.button-group {
+  border-radius: 4rem;
   display: flex;
   justify-content: space-around;
   margin-top: 3px;
+  position: sticky;
+  top: 126px;
   width: 100vw;
 }
 
 .map-button {
   font-size: 150%;
-  width: 33%;
+  /* width: 33%; */
 }
 
 button.landing {
@@ -123,15 +133,21 @@ ul {
   width: 400px;
 }
 
-.map-container {
-  height: 350px;
-  text-align: center;
-  width: 100%;
+.map-container img {
+  padding: 8rem 1rem 1rem 1rem;
+  width: 100vw;
 }
 
-.map-container img {
-  padding: 1rem;
-  width: 100vw;
+.map-nav a {
+  padding: 0;
+  border: 0px;
+  border-radius: 1000px;
+  opacity: 1.0;
+  outline: 0px;
+}
+
+.map-nav a button {
+  border-radius: 1000px;
 }
 
 /* .map-container img {

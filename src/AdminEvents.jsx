@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
-import Event from './Event.jsx';
 import EventForm from './EventForm';
 
 class AdminEvents extends Component {
@@ -32,7 +31,7 @@ class AdminEvents extends Component {
         <Header />
         <EventForm />
             {this.state.data.map(eventInfo => {
-                return (    
+                return (
                     <div className="event-detail-card content">
                         <div className="grid grid--gutters title-block">
                             <div className="event-detail-block">
@@ -43,7 +42,7 @@ class AdminEvents extends Component {
                                         <input type="text" defaultValue={eventInfo.month} />
                                         <label>Day:</label>
                                         <input type="text" defaultValue={eventInfo.day}/>
-                                   
+
                                     </div>
                                     <div>
                                         <label>Event Title:</label>
