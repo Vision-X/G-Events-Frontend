@@ -31,48 +31,49 @@ class AdminEvents extends Component {
       <div>
         <Header />
         <EventForm />
-          {this.state.data.map(eventInfo => {
-            return (
-              <div className="event-detail-card content">
-                <div className="grid grid--gutters title-block">
-                  <div className="event-detail-block">
-                    <div className="box">
-                      <h4 className="month">{eventInfo.month}</h4>
-                      <h6 className="day">{eventInfo.day}</h6>
+            {this.state.data.map(eventInfo => {
+                return (    
+                    <div className="event-detail-card content">
+                        <div className="grid grid--gutters title-block">
+                            <div className="event-detail-block">
+                                <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
+                                    <label>Add Event Here: </label>
+                                    <div>
+                                        <label>Month:</label>
+                                        <input type="text" defaultValue={eventInfo.month} />
+                                        <label>Day:</label>
+                                        <input type="text" defaultValue={eventInfo.day}/>
+                                   
+                                    </div>
+                                    <div>
+                                        <label>Event Title:</label>
+                                        <input type="text" name="Event Title" defaultValue={eventInfo.title} />
+                                    </div>
+                                    <label>Time:</label>
+                                    <input type="text" name="time" defaultValue={eventInfo.time} />
+                                    <hr></hr>
+                                    <label>Location:</label>
+                                    <input type="text" defaultValue={eventInfo.location} />
+
+                                    <label>Address:</label>
+                                    <input type="text" defaultValue="1644 Platte Street, Denver, CO 80202"/>
+
+                                    <label>Room:</label>
+                                    <input type="text" name="room" />
+                                    <hr></hr>
+                                    <label>Event Description:</label>
+                                    <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                    <input type="submit" value="Add Event" />
+                                    <input type="submit" value="Delete Event"/>
+                                    <input type="submit" value="Update Event"/>
+                                </form>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  <div className="grid-cell">
-                    <h1 className="title">{eventInfo.title}</h1>
-                    <p className="time">
-                      {eventInfo.time}
-                    </p>
-                  </div>
-                </div>
-                <hr></hr>
-                <div className="grid grid--gutters location-block">
-                  <div className="grid-cell">
-                    <p className="address">
-                      <a href="#">
-                        {eventInfo.location}
-                      </a>
-                      <p>1644 Platte Street</p>
-                      <p>Denver, CO 80202</p>
-                    </p>
-                  </div>
-                </div>
-                <hr className="short"></hr>
-                <div className="grid grid--gutters detail-block">
-                  <div className="grid-cell">
-                    <p className="details">
-                      {eventInfo.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )
-          })
-        }
-      </div>
+                    )}
+                )}
+                }
+            </div>
     )
   }
 };
