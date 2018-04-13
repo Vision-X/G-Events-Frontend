@@ -3,7 +3,7 @@ import Header from './Header.jsx';
 import Event from './Event.jsx';
 import EventForm from './EventForm';
 
-class EventsPage extends Component {
+class AdminEvents extends Component {
   constructor() {
     super();
     this.state = {
@@ -30,6 +30,7 @@ class EventsPage extends Component {
     return (
       <div>
         <Header />
+        <EventForm />
           {this.state.data.map(eventInfo => {
             return (
               <div className="event-detail-card content">
@@ -76,4 +77,4 @@ class EventsPage extends Component {
   }
 };
 
-export default EventsPage;
+export default AdminEvents;
