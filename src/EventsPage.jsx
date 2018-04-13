@@ -14,12 +14,12 @@ class EventsPage extends Component {
   getEvents() {
     const url = "https://g-events-api.herokuapp.com/events";
     let dataGrab = (response) => {
-      this.setState({data: response});
+      this.setState({ data: response });
     };
     return fetch(url)
-          .then(response => response.json())
-          .then(dataGrab)
-          .catch()
+      .then(response => response.json())
+      .then(dataGrab)
+      .catch()
   }
 
   componentWillMount() {
@@ -30,8 +30,12 @@ class EventsPage extends Component {
     return (
       <div>
         <Header />
-          {this.state.data.map(eventInfo => {
-            return (
+        {this.state.data.map(eventInfo => {
+          return (
+            <div>
+              <div>
+                <img src="./assets/galvanize_sign.jpg" alt="galvanize sign" />
+              </div>
               <div className="event-detail-card content">
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
@@ -68,8 +72,9 @@ class EventsPage extends Component {
                   </div>
                 </div>
               </div>
-            )
-          })
+            </div>
+          )
+        })
         }
       </div>
     )

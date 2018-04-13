@@ -33,11 +33,10 @@ class AdminEvents extends Component {
         <EventForm />
             {this.state.data.map(eventInfo => {
                 return (    
-                    <div className="event-detail-card content">
+                    <div className="event-detail-card content event-form">
                         <div className="grid grid--gutters title-block">
                             <div className="event-detail-block">
                                 <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
-                                    <label>Add Event Here: </label>
                                     <div>
                                         <label>Month:</label>
                                         <input type="text" defaultValue={eventInfo.month} />
@@ -63,9 +62,8 @@ class AdminEvents extends Component {
                                     <hr></hr>
                                     <label>Event Description:</label>
                                     <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
-                                    <input type="submit" value="Add Event" />
-                                    <input type="submit" value="Delete Event"/>
                                     <input type="submit" value="Update Event"/>
+                                    <input type="submit" value="Delete Event"/>
                                 </form>
                             </div>
                         </div>
