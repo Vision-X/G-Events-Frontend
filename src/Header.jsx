@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 class Header extends Component {
   render() {
     return (
-      <header>
+      <header className="fixed-top">
         <nav className="navbar">
           <nav className="navbar navbar-inverse navbar-fixed-top">
             <div className="container-fluid">
               <div className="navbar-header">
-                <a className="navbar-brand mx-auto mx-auto gorange" href="#">
+                <a className="navbar-brand mx-auto mx-auto gorange">
                   <img src="http://jasenmichael.com/img/galvanize-logo.png" width="40" height="40" alt="gSchool logo" />
                 </a>
               </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
-import Event from './Event.jsx';
 import EventForm from './EventForm';
 
 class AdminEvents extends Component {
@@ -56,10 +55,8 @@ class AdminEvents extends Component {
                                         <hr></hr>
                                         <label>Location:</label>
                                         <input type="text" defaultValue={eventInfo.location} />
-
                                         <label>Address:</label>
                                         <input type="text" defaultValue="1644 Platte Street, Denver, CO 80202" />
-
                                         <label>Room:</label>
                                         <input type="text" name="room" />
                                         <hr></hr>
@@ -67,15 +64,15 @@ class AdminEvents extends Component {
                                         <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Update Event" />
                                         <input type="submit" value="Delete Event" />
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                                  </form>
+                              </div>
+                          </div>
+                      </div>
                     )
                 }
-                )}
-                }
-            </div>
+             )}
+           }
+          </div>
         )
     }
 };

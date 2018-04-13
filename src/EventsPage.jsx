@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
-import Event from './Event.jsx';
-import EventForm from './EventForm';
 
 class EventsPage extends Component {
   constructor() {
@@ -30,24 +28,34 @@ class EventsPage extends Component {
     return (
       <div>
         <Header />
-        <div className="events-info">
-          <img className="event-pic" src="./assets/galvanize_sign.jpg" alt="galvanize sign" />
-        </div>
-        {this.state.data.map(eventInfo => {
-          return (
-            <div className="event-detail-card content">
-              <div className="grid grid--gutters title-block">
-                <div className="event-detail-block">
-                  <div className="box">
-                    <h4 className="month">{eventInfo.month}</h4>
-                    <h6 className="day">{eventInfo.day}</h6>
+          {this.state.data.map(eventInfo => {
+            return (
+              <div id={eventInfo.id} className="event-detail-card content">
+                <div className="grid grid--gutters title-block">
+                  <div className="event-detail-block">
+                    <div className="box">
+                      <h4 className="month">{eventInfo.month}</h4>
+                      <h6 className="day">{eventInfo.day}</h6>
+                    </div>
+                  </div>
+                  <div className="grid-cell">
+                    <h2 className="title">{eventInfo.title}</h2>
+                    <p className="time">
+                      {eventInfo.time}
+                    </p>
                   </div>
                 </div>
-                <div className="grid-cell">
-                  <h1 className="title">{eventInfo.title}</h1>
-                  <p className="time">
-                    {eventInfo.time}
-                  </p>
+                <hr></hr>
+                <div className="grid grid--gutters location-block">
+                  <div className="grid-cell">
+                    <p className="address">
+                      <h3>
+                        {eventInfo.location}
+                      </h3>
+                      <p>1644 Platte Street</p>
+                      <p>Denver, CO 80202</p>
+                    </p>
+                  </div>
                 </div>
               </div>
               <hr></hr>
