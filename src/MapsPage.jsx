@@ -6,7 +6,8 @@ class MapsPage extends Component {
   constructor() {
     super();
     this.state = {
-      mapData: []
+      mapData: [],
+      LLUrl: ''
     }
   }
 
@@ -15,7 +16,11 @@ class MapsPage extends Component {
     let dataGrab = (response) => {
       this.setState({mapData: response});
       console.log(this.state.mapData);
-      console.log(this.state.mapData[0]['LL'].portraitMapUrl);
+      this.setState({fknUrl: response[0]['LL'].portraitMapUrl})
+      console.log(this.state.fknUrl, "fknurl");
+
+      {/*    <img src={state.mapData[0]['LL'].portraitMapUrl} alt="" /> */}
+
     };
     return fetch(url)
           .then(response => response.json())
@@ -23,7 +28,7 @@ class MapsPage extends Component {
           .catch()
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getMaps();
   }
 
@@ -33,7 +38,7 @@ class MapsPage extends Component {
         <Header />
         <MapNav />
         <div className="map-container">
-          <img src="http://g-events-api.herokuapp.com/map-images/LL-PlatteFloorPortraitMap.png" alt=""/>
+          <img className="img-fluid" src={this.state.fknUrl} alt="" />
         </div>
       </div>
     )
