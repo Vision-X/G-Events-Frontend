@@ -153,6 +153,17 @@ label {
   width: 20%;
 }
 
+.event-pic {
+  width: 100vw;
+  height: 80%;
+  opacity: 20%;
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .event-form {
   background-color: rgb(245, 245, 245);
 }
