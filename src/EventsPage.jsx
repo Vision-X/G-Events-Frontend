@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx';
 import Event from './Event.jsx';
+import EventForm from './EventForm';
 
 class EventsPage extends Component {
   constructor() {
