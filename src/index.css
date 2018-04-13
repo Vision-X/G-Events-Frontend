@@ -108,7 +108,7 @@ button.landing:active {
 }
 
 .event-detail-card {
-  background-color: gray;
+  /* background-color: gray; */
   border: 1px solid orange;
   border-radius: 1rem;
   margin: 1rem 10%;
@@ -118,6 +118,24 @@ button.landing:active {
 
 ul {
   display: flex;
+  list-style-type: none;
   justify-content: space-around;
   width: 400px;
 }
+
+.map-container {
+  height: 350px;
+  text-align: center;
+  width: 100%;
+}
+
+.map-container img {
+  padding: 1rem;
+  width: 100vw;
+}
+
+/* .map-container img {
+  min-height: 500px;
+  margin-top: 1rem;
+  max-width: 60%;
+} */

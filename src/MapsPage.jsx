@@ -6,16 +6,21 @@ class MapsPage extends Component {
   constructor() {
     super();
     this.state = {
-      mapData: []
+      mapData: [],
+      LLUrl: ''
     }
   }
- 
+
   getMaps() {
     const url = "https://g-events-api.herokuapp.com/maps";
     let dataGrab = (response) => {
       this.setState({mapData: response});
       console.log(this.state.mapData);
-      
+      this.setState({fknUrl: response[0]['LL'].portraitMapUrl})
+      console.log(this.state.fknUrl, "fknurl");
+
+      {/*    <img src={state.mapData[0]['LL'].portraitMapUrl} alt="" /> */}
+
     };
     return fetch(url)
           .then(response => response.json())
@@ -23,7 +28,7 @@ class MapsPage extends Component {
           .catch()
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.getMaps();
   }
 
@@ -33,7 +38,7 @@ class MapsPage extends Component {
         <Header />
         <MapNav />
         <div className="map-container">
-        {/* <img src= { this.state.mapData.LL[1]} alt=""/> */}
+          <img className="img-fluid" src={this.state.fknUrl} alt="" />
         </div>
       </div>
     )
