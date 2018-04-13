@@ -24,7 +24,7 @@ class InputForm extends Component {
 
     render() {
         return (
-            <div className="event-detail-card content">
+            <div className="event-detail-card content event-form">
                 <div className="grid grid--gutters title-block">
                     <div className="event-detail-block">
                         <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>

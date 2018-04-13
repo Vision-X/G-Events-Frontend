@@ -12,13 +12,12 @@ class EventsPage extends Component {
   getEvents() {
     const url = "https://g-events-api.herokuapp.com/events";
     let dataGrab = (response) => {
-      this.setState({data: response});
-      console.log(this.state.data, "new data");
+      this.setState({ data: response });
     };
     return fetch(url)
-          .then(response => response.json())
-          .then(dataGrab)
-          .catch()
+      .then(response => response.json())
+      .then(dataGrab)
+      .catch()
   }
 
   componentWillMount() {
@@ -58,17 +57,30 @@ class EventsPage extends Component {
                     </p>
                   </div>
                 </div>
-                <hr className="short"></hr>
-                <div className="grid grid--gutters detail-block">
-                  <div className="grid-cell">
-                    <p className="details">
-                      {eventInfo.description}
-                    </p>
-                  </div>
+              </div>
+              <hr></hr>
+              <div className="grid grid--gutters location-block">
+                <div className="grid-cell">
+                  <p className="address">
+                    <a href="#">
+                      {eventInfo.location}
+                    </a>
+                    <p>1644 Platte Street</p>
+                    <p>Denver, CO 80202</p>
+                  </p>
                 </div>
               </div>
-            )
-          })
+              <hr className="short"></hr>
+              <div className="grid grid--gutters detail-block">
+                <div className="grid-cell">
+                  <p className="details">
+                    {eventInfo.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )
+        })
         }
       </div>
     )
