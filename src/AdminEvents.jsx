@@ -28,7 +28,6 @@ class AdminEvents extends Component {
     render() {
         return (
             <div>
-                <Header />
                 <div>
                     <h1>Events Admin Panel</h1>
                 </div>

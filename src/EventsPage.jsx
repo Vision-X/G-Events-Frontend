@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
 
 class EventsPage extends Component {
   constructor() {
@@ -26,8 +25,7 @@ class EventsPage extends Component {
 
   render() {
     return (
-      <div>
-        <Header />
+      <div id="map-page">
           {this.state.data.map(eventInfo => {
             return (
               <div id={eventInfo.id} className="event-detail-card content">
@@ -57,30 +55,17 @@ class EventsPage extends Component {
                     </p>
                   </div>
                 </div>
-              </div>
-              <hr></hr>
-              <div className="grid grid--gutters location-block">
-                <div className="grid-cell">
-                  <p className="address">
-                    <a href="#">
-                      {eventInfo.location}
-                    </a>
-                    <p>1644 Platte Street</p>
-                    <p>Denver, CO 80202</p>
-                  </p>
+                <hr className="short"></hr>
+                <div className="grid grid--gutters detail-block">
+                  <div className="grid-cell">
+                    <p className="details">
+                      {eventInfo.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-              <hr className="short"></hr>
-              <div className="grid grid--gutters detail-block">
-                <div className="grid-cell">
-                  <p className="details">
-                    {eventInfo.description}
-                  </p>
-                </div>
-              </div>
-            </div>
-          )
-        })
+            )
+          })
         }
       </div>
     )
