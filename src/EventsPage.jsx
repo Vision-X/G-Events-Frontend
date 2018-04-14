@@ -47,9 +47,9 @@ class EventsPage extends Component {
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
                     <p className="address">
-                      <h3>
+                      <h4>
                         {eventInfo.location}
-                      </h3>
+                      </h4>
                       <p>1644 Platte Street</p>
                       <p>Denver, CO 80202</p>
                     </p>
@@ -61,6 +61,7 @@ class EventsPage extends Component {
                     <p className="details">
                       {eventInfo.description}
                     </p>
+                    <p><a href="#">Located on the 4th Floor </a><a href="#">Picachu - Room Directions</a></p>
                   </div>
                 </div>
               </div>
