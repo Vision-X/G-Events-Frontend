@@ -6,7 +6,6 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-
     }
     this._onClick = this._onClick.bind(this);
   }
