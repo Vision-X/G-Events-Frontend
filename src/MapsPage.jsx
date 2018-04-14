@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
 
 class MapsPage extends Component {
   constructor() {
@@ -49,7 +48,6 @@ class MapsPage extends Component {
   render() {
     return (
       <div>
-        <Header />
         <div className="button-group map-nav fixed-top">
           <a href="#bottom" className="basic-button btn btn-secondary map-button"><button onClick={this._onClick} className="basic-button btn btn-secondary map-button">LL</button></a>
           <a href="#bottom" className="basic-button btn btn-secondary map-button"><button onClick={this._onClick} className="basic-button btn btn-secondary map-button">L3</button></a>
