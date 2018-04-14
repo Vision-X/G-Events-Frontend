@@ -8,16 +8,17 @@ body {
   margin: 0;
   margin-top: 8rem;
   padding: 0;
+
 }
 
 div h1 {
-  color: orange;
+  color: #F79020;
   font-size: 2rem;
   margin: 0;
 }
 
 .title {
-  color: orange;
+  color: #F79020;
   font-size: 1.4rem;
   margin: 0;
 }
@@ -27,12 +28,29 @@ div h1 {
   max-width: 80vw;
 }
 
+.navbar {
+  padding: 0px;
+}
+
+a.navbar-brand {
+  padding: 0px;
+}
+
+a.navbar-brand img {
+  margin-bottom: 6px;
+  width: 40px;
+  height: 40px;
+}
+
 .basic-button {
   background-color: #003B4C;
   color: #F79020;
+  border-radius: 0px;
+  border: 2px solid #003b4d;
+
 }
 
-.basic-button:hover {
+.basic-button:hover, .basic-button.selected {
   background-color: #F79020;
   color: #003B4C;
 }
@@ -47,13 +65,13 @@ div h1 {
   display: flex;
   justify-content: space-around;
   margin-top: 3px;
-  position: sticky;
+  /* position: sticky; */
   top: 126px;
   width: 100vw;
 }
 
 .map-button {
-  font-size: 150%;
+  font-size: 80%;
   /* width: 33%; */
 }
 
@@ -83,7 +101,7 @@ button.landing:active {
 /* floors selection */
 
 .floors {
-  background: #f3efef;
+  /* background: #f3efef; */
   height: 100%;
   text-align: center;
 }
@@ -118,10 +136,11 @@ button.landing:active {
 }
 
 .event-detail-card {
-  border: 1px solid orange;
+  border: 1px solid #F79020;
   margin: 1rem 10%;
   max-width: 80%;
   padding: 1rem 1rem;
+  background-color: #fefeff;
 }
 
 ul {
@@ -130,10 +149,20 @@ ul {
   justify-content: space-around;
   width: 400px;
 }
+.map-container {
+  /* background-color: #003b4d; */
+  padding: 0px;
+  margin: 0px;
+}
 
 .map-container img {
-  padding: 8rem 1rem 1rem 1rem;
+  /* padding: 8rem 1rem 1rem 1rem; */
+  /* width: calc(100vw - 80px); */
   width: 100vw;
+  background-color: #003b4d;
+  padding: 0px;
+  margin-top: -84px;
+    /* position: sticky; */
 }
 
 .map-nav a {
@@ -233,4 +262,19 @@ label {
   -webkit-box-direction: normal;
   flex-flow: row;
   flex-wrap: wrap;
+}
+
+.btn-group {
+  /* padding-top: 40px; */
+  z-index: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  /* background-color: #003b4d; */
+}
+
+@media all and (max-width: 658px) {
+  .btn-group {
+    padding-top: 82px;
+  }
 }
