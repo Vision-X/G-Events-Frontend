@@ -7,11 +7,11 @@ class Header extends Component {
     return (
       <header className="fixed-top">
         <nav className="navbar">
-          <nav className="navbar navbar-inverse navbar-fixed-top">
+          <nav className="navbar navbar-fixed-top">
             <div className="container-fluid">
               <div className="navbar-header">
-                <a className="navbar-brand mx-auto mx-auto gorange">
-                  <img src="http://jasenmichael.com/img/galvanize-logo.png" alt="gSchool logo" />
+                <a className="navbar-brand mx-auto">
+                  <img class="img-fluid" src="./assets/galvanize-logo-2.png" alt="gSchool logo" />
                 </a>
               </div>
               <h3>Events Locator</h3>
@@ -21,10 +21,18 @@ class Header extends Component {
           <ToggleDisplay show={window.location.pathname !== "/"}>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/events">Events</NavLink></li>
-            <li><NavLink to="/maps">Maps</NavLink></li>
+            <li className={((window.location.pathname === '/events') ? 'selected' : null)}>
+              <NavLink to="/events">Events</NavLink>
+              </li>
+            <li className={((window.location.pathname === '/maps') ? 'selected' : null)}>
+              <NavLink to="/maps">Maps</NavLink>
+            </li>
           </ul>
           </ToggleDisplay>
+
+
+
+
 
         </nav>
       </header>
