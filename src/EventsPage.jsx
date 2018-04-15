@@ -32,7 +32,7 @@ class EventsPage extends Component {
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
                     <div className="box">
-                      <h4 className="month">{eventInfo.month}</h4>
+                      <h4 className="month">{eventInfo.month.substring(0, 3)}</h4>
                       <h6 className="day">{eventInfo.day}</h6>
                     </div>
                   </div>
@@ -60,8 +60,8 @@ class EventsPage extends Component {
                   <div className="grid-cell">
                     <p className="details">
                       {eventInfo.description}
-                    </p>
-                    <p><a href="#">Located on the 4th Floor </a><a href="#">Picachu - Room Directions</a></p>
+                      <a href="#">4th Floor </a>
+                    <a href="#">Picachu - Room Directions</a></p>
                   </div>
                 </div>
               </div>
