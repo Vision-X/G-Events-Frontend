@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Preview from './Preview';
-
 
 class InputForm extends Component {
     constructor() {
@@ -28,7 +26,7 @@ class InputForm extends Component {
                 <div className="grid grid--gutters title-block">
                     <div className="event-detail-block">
                         <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
-                            <label>Add Event Here: </label>
+                            <h1>Add Event Here: </h1>
                             <div>
                                 <label>Month:</label>
                                 <input type="text" />
