@@ -5,7 +5,7 @@ import MapButton from './MapButton.jsx';
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div id="home">
         <EventButton />
         <MapButton />
       </div>
