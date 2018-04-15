@@ -11,13 +11,23 @@ class InputForm extends Component {
 
     onSubmit(e) {
         e.preventDefault();
+        const EventInfo = {
+            month: this.month.value,
+            day: this.day.value,
+            title: this.title.value,
+            time: this.time.value,
+            category: this.category.value,
+            location: this.location.value,
+            address: this.address.value,
+            room: this.room.value,
+            details: this.details.value,
+        }
         const message = 'Your event was submitted!';
-        const textField = this.refs.textField;
-        textField.value = '';
         this.setState({
             success: [message],
-            EventInput: [],
+            EventInput: [EventInfo],            
         });
+        
     }
 
     render() {
@@ -29,31 +39,32 @@ class InputForm extends Component {
                             <h1>Add Event Here: </h1>
                             <div>
                                 <label>Month:</label>
-                                <input type="text" />
+                                <input ref={(input) => this.month = input} type="text" name="Month" />
                                 <label>Day:</label>
-                                <input type="text" />
+                                <input ref={(input) => this.day = input} type="text" Name="Day" />
                             </div>
                             <div>
                                 <label>Event Title:</label>
-                                <input type="text" name="Event Title" />
+                                <input ref={(input) => this.title = input} type="text" name="Event Title" />
                             </div>
                             <label>Time:</label>
-                            <input type="text" name="time" />
+                            <input ref={(input) => this.time = input} type="text" name="time" />
                             <hr></hr>
                             <label>Event Category:</label>
-                            <input type="text" name="category" />
+                            <input ref={(input) => this.category = input} type="text" name="category" />
                             <hr></hr>
                             <label>Location:</label>
-                            <input type="text" />
+                            <input ref={(input) => this.location = input} type="text" />
                             <label>Address:</label>
-                            <input type="text" />
+                            <input ref={(input) => this.address = input} type="text" />
                             <label>Room:</label>
-                            <input type="text" name="room" />
+                            <input ref={(input) => this.room = input} type="text" name="room" />
                             <hr></hr>
                             <label>Event Details:</label>
-                            <textarea type="text" name="Event Details" />
+                            <textarea ref={(input) => this.details = input} type="text" name="Event Details" />
                             <input type="submit" value="Add Event" />
                             <input type="submit" value="Clear Form" />
+                            <p id="message">{this.state.success}</p>
                         </form>
                     </div>
                 </div>
