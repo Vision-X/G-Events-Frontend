@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ToggleDisplay from 'react-toggle-display';
+// import { CSSTransitionGroup } from 'react-transition-group'
+
 
 const url = "https://g-events-api.herokuapp.com/rooms";
 const LLlandscapeUrl = 'http://g-events-api.herokuapp.com/map-images/LL-PlatteFloorLandscapeMap.png'
@@ -100,6 +102,7 @@ class MapsPage extends Component {
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'LL') ? 'selected' : null)}>Lower Level</button>
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L3') ? 'selected' : null)}>3rd Floor</button>
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L4') ? 'selected' : null)}>4th Floor</button>
+
           </div>
 
         <div className="map-container">
@@ -108,6 +111,7 @@ class MapsPage extends Component {
             <img className="img-fluid landscape" src={this.state.selectedLandscapeMap}  alt="" />
           </div>
         </div>
+
         </ToggleDisplay>
 
         <span id="bottom"></span>
