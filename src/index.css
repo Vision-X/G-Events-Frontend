@@ -30,6 +30,11 @@ div h1 {
 
 }
 
+/* hides dotted lines on all a tags */
+a, a:active, a:focus {
+  outline: none;
+}
+
 header{
   border-bottom: 6px solid #41b5c5;
   border-top: 6px solid #642241;
@@ -155,12 +160,17 @@ nav ul {
 nav ul li {
   margin: 0 .5rem 0 .5rem;
   padding: 0px 2px 0px 2px;
-
 }
+
+nav ul li a:hover {
+  text-decoration: none;
+}
+
 
 ul li.selected {
   border-bottom: 2px solid #41b5c5;
-  padding: 6px 2px 0px 2px;
+  /* padding: 6px 2px 0px 2px; */
+
 }
 
 .map-nav a {
@@ -258,8 +268,6 @@ label {
   flex-wrap: wrap;
 }
 
-
-
 .btn-group {
   z-index: auto;
   position: fixed;
@@ -270,7 +278,7 @@ label {
 
 @media all and (max-width: 658px) {
   .btn-group {
-    padding-top: 82px;
+    margin-top: 82px;
   }
 }
 
@@ -311,4 +319,15 @@ label {
   .map-container div img.landscape {
     display: none;
   }
+}
+
+
+/* transitions */
+.trans-enter {
+  right: 100px;
+}
+
+.trans-enter-active {
+  right: 0px;
+  transition: .5s ease-in all;
 }
