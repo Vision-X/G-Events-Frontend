@@ -40,6 +40,8 @@ class EventsPage extends Component {
                     <h2 className="title">{eventInfo.title}</h2>
                     <p className="time">
                       {eventInfo.time}
+                      <hr className="short"></hr>
+                      <span>{eventInfo.category}</span>
                     </p>
                   </div>
                 </div>
@@ -52,6 +54,7 @@ class EventsPage extends Component {
                       </h4>
                       <p>1644 Platte Street</p>
                       <p>Denver, CO 80202</p>
+                      <span><a target="_blank" href={eventInfo.registerUrl}>register here</a></span>
                     </p>
                   </div>
                 </div>
@@ -60,8 +63,8 @@ class EventsPage extends Component {
                   <div className="grid-cell">
                     <p className="details">
                       {eventInfo.description}
-                      <a href="#">4th Floor </a>
-                    <a href="#">Picachu - Room Directions</a></p>
+                      <a href="/map/L4">4th Floor </a>
+                    <a href="/map/2">Picachu - Room Directions</a></p>
                   </div>
                 </div>
               </div>
