@@ -42,6 +42,9 @@ class InputForm extends Component {
                             <label>Time:</label>
                             <input type="text" name="time" />
                             <hr></hr>
+                            <label>Event Category:</label>
+                            <input type="text" name="category" />
+                            <hr></hr>
                             <label>Location:</label>
                             <input type="text" />
                             <label>Address:</label>

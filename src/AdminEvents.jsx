@@ -52,6 +52,9 @@ class AdminEvents extends Component {
                                         <label>Time:</label>
                                         <input type="text" name="time" defaultValue={eventInfo.time} />
                                         <hr></hr>
+                                        <label>Event Category:</label>
+                                        <input type="text" name="category" defaultValue={eventInfo.category} />
+                                        <hr></hr>
                                         <label>Location:</label>
                                         <input type="text" defaultValue={eventInfo.location} />
                                         <label>Address:</label>
@@ -63,14 +66,14 @@ class AdminEvents extends Component {
                                         <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Update Event" />
                                         <input type="submit" value="Delete Event" />
-                                  </form>
-                              </div>
-                          </div>
-                      </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     )
                 }
-             )}
-           }
+                )}
+                }
           </div>
         )
     }
