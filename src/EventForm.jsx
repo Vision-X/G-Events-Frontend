@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import Preview from './Preview';
-
 
 class InputForm extends Component {
     constructor() {
@@ -13,49 +11,54 @@ class InputForm extends Component {
 
     onSubmit(e) {
         e.preventDefault();
+        const EventInfo = {
+            month: this.month.value,
+            day: this.day.value,
+            title: this.title.value,
+            time: this.time.value,
+            category: this.category.value,
+            location: this.location.value,
+            address: this.address.value,
+            room: this.room.value,
+            details: this.details.value,
+        }
         const message = 'Your event was submitted!';
-        const textField = this.refs.textField;
-        textField.value = '';
         this.setState({
             success: [message],
-            EventInput: [],
+            EventInput: [EventInfo],
         });
     }
-
     render() {
         return (
             <div className="event-detail-card content event-form">
                 <div className="grid grid--gutters title-block">
                     <div className="event-detail-block">
                         <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
-                            <label>Add Event Here: </label>
-                            <div>
-                                <label>Month:</label>
-                                <input type="text" />
-                                <label>Day:</label>
-                                <input type="text" />
-                            </div>
-                            <div>
-                                <label>Event Title:</label>
-                                <input type="text" name="Event Title" />
-                            </div>
+                            <h1>Add Event Here: </h1>
+                            <label>Month:</label>
+                            <input ref={(input) => this.month = input} type="text" name="Month" />
+                            <label>Day:</label>
+                            <input ref={(input) => this.day = input} type="text" Name="Day" />
+                            <label>Event Title:</label>
+                            <input ref={(input) => this.title = input} type="text" name="Event Title" />
                             <label>Time:</label>
-                            <input type="text" name="time" />
+                            <input ref={(input) => this.time = input} type="text" name="time" />
                             <hr></hr>
                             <label>Event Category:</label>
-                            <input type="text" name="category" />
+                            <input ref={(input) => this.category = input} type="text" name="category" />
                             <hr></hr>
                             <label>Location:</label>
-                            <input type="text" />
+                            <input ref={(input) => this.location = input} type="text" />
                             <label>Address:</label>
-                            <input type="text" />
+                            <input ref={(input) => this.address = input} type="text" />
                             <label>Room:</label>
-                            <input type="text" name="room" />
+                            <input ref={(input) => this.room = input} type="text" name="room" />
                             <hr></hr>
                             <label>Event Details:</label>
-                            <textarea type="text" name="Event Details" />
+                            <textarea ref={(input) => this.details = input} type="text" name="Event Details" />
                             <input type="submit" value="Add Event" />
                             <input type="submit" value="Clear Form" />
+                            <p id="message">{this.state.success}</p>
                         </form>
                     </div>
                 </div>
