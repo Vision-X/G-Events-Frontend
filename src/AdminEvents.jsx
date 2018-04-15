@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header.jsx';
+// import Header from './Header.jsx';
 import EventForm from './EventForm';
 
 class AdminEvents extends Component {

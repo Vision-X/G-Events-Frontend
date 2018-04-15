@@ -3,7 +3,7 @@ import ToggleDisplay from 'react-toggle-display';
 // import { CSSTransitionGroup } from 'react-transition-group'
 
 
-const url = "https://g-events-api.herokuapp.com/rooms";
+// const url = "https://g-events-api.herokuapp.com/rooms";
 const LLlandscapeUrl = 'http://g-events-api.herokuapp.com/map-images/LL-PlatteFloorLandscapeMap.png'
 const L3landscapeUrl = 'http://g-events-api.herokuapp.com/map-images/L3-PlatteFloorLandscapeMap.png'
 const L4landscapeUrl = 'http://g-events-api.herokuapp.com/map-images/L4-PlatteFloorLandscapeMap.png'
@@ -97,7 +97,7 @@ class MapsPage extends Component {
           </div>
         </ToggleDisplay>
 
-        <ToggleDisplay show={!this.state.selectedPortraitMap == ''}>
+        <ToggleDisplay show={!this.state.selectedPortraitMap === ''}>
           <div className="btn-group fixed-bottom}">
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'LL') ? 'selected' : null)}>Lower Level</button>
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L3') ? 'selected' : null)}>3rd Floor</button>
