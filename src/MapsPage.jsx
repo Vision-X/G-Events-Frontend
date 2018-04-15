@@ -97,7 +97,7 @@ class MapsPage extends Component {
           </div>
         </ToggleDisplay>
 
-        <ToggleDisplay show={!this.state.selectedPortraitMap === ''}>
+        <ToggleDisplay show={!this.state.selectedPortraitMap == ''}>
           <div className="btn-group fixed-bottom}">
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'LL') ? 'selected' : null)}>Lower Level</button>
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L3') ? 'selected' : null)}>3rd Floor</button>
