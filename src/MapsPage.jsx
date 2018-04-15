@@ -23,7 +23,7 @@ class MapsPage extends Component {
         L4portraitUrl,
         selectedPortraitMap: '',
         selectedLandscapeMap: '',
-        selecteFloor: ''
+        selectedFloor: ''
       }
     };
     this._onClick = this._onClick.bind(this);
@@ -40,6 +40,7 @@ class MapsPage extends Component {
     this.setState({L4portraitUrl});
     this.setState({selectedPortraitMap: ''});
     this.setState({selectedLandscapeMap: ''});
+    this.setState({selectedFloor: ''});
     // };
     // return fetch(url)
     //       .then(response => response.json())
@@ -56,20 +57,22 @@ class MapsPage extends Component {
       if (event.target.textContent === 'Lower Level') {
         this.setState({selectedPortraitMap: this.state.LLportraitUrl});
         this.setState({selectedLandscapeMap: this.state.LLlandscapeUrl});
-        this.setState({selecteFloor: 'LL'});
+        this.setState({selectedFloor: 'LL'});
       } else if (event.target.textContent === '3rd Floor') {
         this.setState({selectedPortraitMap: this.state.L3portraitUrl});
         this.setState({selectedLandscapeMap: this.state.L3landscapeUrl});
-        this.setState({selecteFloor: 'L3'});
+        this.setState({selectedFloor: 'L3'});
       } else {
         this.setState({selectedPortraitMap: this.state.L4portraitUrl});
         this.setState({selectedLandscapeMap: this.state.L4landscapeUrl});
-        this.setState({selecteFloor: 'L4'});
+        this.setState({selectedFloor: 'L4'});
       }
+
     // }
     setTimeout(function(){
       var element = document.querySelector("#bottom");
       element.scrollIntoView();
+
     }, 300);
 
   };
@@ -94,9 +97,9 @@ class MapsPage extends Component {
 
         <ToggleDisplay show={!this.state.selectedPortraitMap == ''}>
           <div className="btn-group fixed-bottom}">
-            <button onClick={this._onClick} className="basic-button btn btn-secondary map-button `${selected}`">Lower Level</button>
-            <button onClick={this._onClick} className="basic-button btn btn-secondary map-button">3rd Floor</button>
-            <button onClick={this._onClick} className="basic-button btn btn-secondary map-button">4th Floor</button>
+            <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'LL') ? 'selected' : null)}>Lower Level</button>
+            <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L3') ? 'selected' : null)}>3rd Floor</button>
+            <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L4') ? 'selected' : null)}>4th Floor</button>
           </div>
 
         <div className="map-container">
