@@ -68,7 +68,7 @@ class InputForm extends Component {
               }, 4000);
             })
             .catch(err => console.log(err));
-            document.getElementById('event-input').reset();
+            document.querySelector('.event-input').reset();
     }
 
 
@@ -88,7 +88,7 @@ class InputForm extends Component {
             <div className="event-detail-card content event-form">
                 <div className="grid grid--gutters title-block">
                     <div className="event-detail-block">
-                        <form id="event-input" onClick={this._onClick} onSubmit={(e) => this.onSubmit(e)}>
+                        <form className="event-input" onClick={this._onClick} onSubmit={(e) => this.onSubmit(e)}>
                             <h1>Add Event Here: </h1>
                             <label>Month:</label>
                             <input id="month"ref={(input) => this.month = input} type="text" name="Month" />
