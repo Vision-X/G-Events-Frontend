@@ -24,9 +24,10 @@ class EditEvents extends Component {
     }
 
     render() {
+        let sortedEvents = this.state.data;
         return (
             <div>
-                {this.state.data.map(eventInfo => {
+                {sortedEvents.sort((a, b) => a.day - b.day).map(eventInfo => {
                     return (
                         <div className="event-detail-card content event-form">
                             <div className="grid grid--gutters title-block">
@@ -62,8 +63,8 @@ class EditEvents extends Component {
                                         <hr></hr>
                                         <label>Event Description:</label>
                                         <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
-                                        <input type="submit" value="Update Event" />
-                                        <input type="submit" value="Delete Event" />
+                                        <input id="update" type="submit" value="Update Event" />
+                                        <input id="delete" type="submit" value="Delete Event" />
                                     </form>
                                 </div>
                             </div>
