@@ -19,7 +19,7 @@ class InputForm extends Component {
             time: this.time.value,
             category: this.category.value,
             location: this.location.value,
-            locationUrl: this.locationUrl,
+            locationUrl: this.locationUrl.value,
             address: this.address.value,
             floor: this.floor.value,
             room: this.room.value,
