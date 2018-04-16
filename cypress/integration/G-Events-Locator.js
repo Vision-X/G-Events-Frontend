@@ -51,5 +51,15 @@ describe('G-Events Map', function () {
     cy.get('button').eq(1).should('contain', "3rd Floor")
 
     cy.get('button').eq(2).should('contain', "Lower Level")
+
+    cy.get('button').eq(1).click()
+
+    cy.get('button').eq(3).should('contain', 'Lower Level')
+
+    cy.get('button').eq(4).should('contain', '3rd Floor')
+
+    cy.get('button').eq(5).should('contain', '4th Floor')
+
+    cy.get('button').eq(6).should('contain', 'Rooms')
   })
 })
