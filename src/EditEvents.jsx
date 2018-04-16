@@ -41,6 +41,8 @@ class EditEvents extends Component {
                                         <input ref={(input) => this.day = input} type="text" defaultValue={eventInfo.day} />
                                         <label>Event Title:</label>
                                         <input ref={(input) => this.title = input} type="text" name="Event Title" defaultValue={eventInfo.title} />
+                                        <label>Registration URL:</label>
+                                        <input ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                                         <label>Time:</label>
                                         <input ref={(input) => this.time = input} type="text" name="time" defaultValue={eventInfo.time} />
                                         <hr></hr>
@@ -49,13 +51,17 @@ class EditEvents extends Component {
                                         <hr></hr>
                                         <label>Location:</label>
                                         <input ref={(input) => this.location = input} type="text" defaultValue={eventInfo.location} />
+                                        <label>Location URL</label>
+                                        <input ref={(input) => this.locationUrl = input} type="text" />
                                         <label>Address:</label>
                                         <input ref={(input) => this.address = input} type="text" defaultValue="1644 Platte Street, Denver, CO 80202" />
+                                        <label>Floor</label>
+                                        <input ref={(input) => this.floor = input} type="text" />
                                         <label>Room:</label>
                                         <input ref={(input) => this.room = input} type="text" name="room" />
                                         <hr></hr>
                                         <label>Event Description:</label>
-                                        <textarea ref={(input) => this.details = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                        <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Update Event" />
                                         <input type="submit" value="Delete Event" />
                                     </form>
