@@ -46,7 +46,7 @@ class EventsPage extends Component {
                     <span className="category">{eventInfo.category}</span>
                   </div>
                   <div>
-                    <button className="event-page-button" target="_blank" href={eventInfo.registerUrl}>Register Here</button>
+                    <a className="event-page-button" target="_blank" href={eventInfo.registerUrl}>Register Here</a>
                   </div>
                 </div>
                 <hr></hr>
@@ -67,8 +67,8 @@ class EventsPage extends Component {
                       <p>Room: {eventInfo.room}</p>
                     </div>
                     <div>
-                      <button className="map-link event-page-button" href="/maps/${eventInfo.floor}">Floor Map</button>
-                      <button className="map-link event-page-button" href="/maps/${eventInfo.room}">Room Map</button>
+                      <a className="map-link event-page-button" href="/maps/${eventInfo.floor}">Floor Map</a>
+                      <a className="map-link event-page-button" href="/maps/${eventInfo.room}">Room Map</a>
                     </div>
                   </div>
                 </div>
