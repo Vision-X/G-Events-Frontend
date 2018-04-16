@@ -20,10 +20,10 @@ class EditEvents extends Component {
             .catch()
     }
 
-    getTheId(e) {
-      let theId = this.id;
-      return theId;
-    }
+    // getTheId(e) {
+    //   let theId = e.target.parentNode.querySelector('.event-id').value;
+    //   return theId;
+    // }
 
     updateEventData(e) {
       e.preventDefault();
@@ -31,23 +31,30 @@ class EditEvents extends Component {
       // const updateUrl = "https://g-events-api.herokuapp.com/events" + theId;
     }
 
-    deleteEventData(e) {
-      e.preventDefault();
-      const deleteUrl = "";
+    deleteEventData(theId) {
+      // event.preventDefault();
+      let thisId = theId;
+      console.log(thisId);
+      let deleteUrl = `https://g-events-api.herokuapp.com/events/${thisId}`;
+      fetch(deleteUrl, {
+        method: "DELETE",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        }
+      })
+        .then(response => response.json())
+        .then(this.getEvents())
+        .catch(err => console.log(err))
     }
 
     _onClick(e) {
       e.preventDefault();
-
-      console.log(e.target.id, "this should say UPDATE or DELETE");
       if (e.target.id === 'update') {
-        let daId = this.getTheId();
-        console.log(daId);
-        //run the update by id function
+          let theId = e.target.parentNode.querySelector('.event-id').value;
       } else if (e.target.id === 'delete') {
-        //run the delete by id function
-        let daId = this.getTheId();
-        console.log(daId);
+          let theId = e.target.parentNode.querySelector('.event-id').value;
+          this.deleteEventData(theId);
       }
     }
 
@@ -76,7 +83,7 @@ class EditEvents extends Component {
                                     <h1>DB Event</h1>
                                     <form className="event-input" onClick={this._onClick} onSubmit={(e) => this.onSubmit(e)}>
                                         <label>Event ID:</label>
-                                        <input ref={(input) => this.id = input} type="text" value={eventInfo.id} />
+                                        <input className="event-id" ref={(input) => this.id = input} type="text" value={eventInfo.id} />
                                         <label>Month:</label>
                                         <input ref={(input) => this.month = input} type="text" defaultValue={eventInfo.month} />
                                         <label>Day:</label>
