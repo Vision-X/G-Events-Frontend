@@ -119,9 +119,17 @@ a.navbar-brand img {
   /* width: 33%; */
 }
 
+#home {
+  display:block;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
 button.landing {
-  font-size: 220%;
-  min-height: 30vh;
+  font-size: 210%;
+  min-height: 20vh;
   width: 80vw;
 }
 
