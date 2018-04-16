@@ -140,6 +140,8 @@ class InputForm extends Component {
                             <input id="day" ref={(input) => this.day = input} type="text" Name="Day" />
                             <label>Event Title:</label>
                             <input id="title" ref={(input) => this.title = input} type="text" name="Event Title" />
+                            <label>Registration URL:</label>
+                            <input id="register-url" ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                             <label>Time:</label>
                             <input id="time" ref={(input) => this.time = input} type="text" name="time" />
                             <hr></hr>
@@ -148,6 +150,8 @@ class InputForm extends Component {
                             <hr></hr>
                             <label>Location:</label>
                             <input id="location" ref={(input) => this.location = input} type="text" />
+                            <label>Location URL</label>
+                            <input id="location-url" ref={(input) => this.locationUrl = input} type="text" name="Location URL"/>
                             <label>Address:</label>
                             <input id="address" ref={(input) => this.address = input} type="text" />
                             <label>Floor:</label>
