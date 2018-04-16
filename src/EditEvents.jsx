@@ -33,34 +33,29 @@ class EditEvents extends Component {
                                 <div className="event-detail-block">
                                     <h1>DB Event</h1>
                                     <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
-                                        <div>
-                                            <label>Event ID:</label>
-                                            <input type="text" value={eventInfo.id} />
-                                            <label>Month:</label>
-                                            <input type="text" defaultValue={eventInfo.month} />
-                                            <label>Day:</label>
-                                            <input type="text" defaultValue={eventInfo.day} />
-
-                                        </div>
-                                        <div>
-                                            <label>Event Title:</label>
-                                            <input type="text" name="Event Title" defaultValue={eventInfo.title} />
-                                        </div>
+                                        <label>Event ID:</label>
+                                        <input ref={(input) => this.id = input} type="text" value={eventInfo.id} />
+                                        <label>Month:</label>
+                                        <input ref={(input) => this.month = input} type="text" defaultValue={eventInfo.month} />
+                                        <label>Day:</label>
+                                        <input ref={(input) => this.day = input} type="text" defaultValue={eventInfo.day} />
+                                        <label>Event Title:</label>
+                                        <input ref={(input) => this.title = input} type="text" name="Event Title" defaultValue={eventInfo.title} />
                                         <label>Time:</label>
-                                        <input type="text" name="time" defaultValue={eventInfo.time} />
+                                        <input ref={(input) => this.time = input} type="text" name="time" defaultValue={eventInfo.time} />
                                         <hr></hr>
                                         <label>Event Category:</label>
-                                        <input type="text" name="category" defaultValue={eventInfo.category} />
+                                        <input ref={(input) => this.category = input} type="text" name="category" defaultValue={eventInfo.category} />
                                         <hr></hr>
                                         <label>Location:</label>
-                                        <input type="text" defaultValue={eventInfo.location} />
+                                        <input ref={(input) => this.location = input} type="text" defaultValue={eventInfo.location} />
                                         <label>Address:</label>
-                                        <input type="text" defaultValue="1644 Platte Street, Denver, CO 80202" />
+                                        <input ref={(input) => this.address = input} type="text" defaultValue="1644 Platte Street, Denver, CO 80202" />
                                         <label>Room:</label>
-                                        <input type="text" name="room" />
+                                        <input ref={(input) => this.room = input} type="text" name="room" />
                                         <hr></hr>
                                         <label>Event Description:</label>
-                                        <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                        <textarea ref={(input) => this.details = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Update Event" />
                                         <input type="submit" value="Delete Event" />
                                     </form>
@@ -70,7 +65,7 @@ class EditEvents extends Component {
                     )
                 }
                 )}
-          </div>
+            </div>
         )
     }
 };
