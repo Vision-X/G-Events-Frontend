@@ -19,17 +19,18 @@ class InputForm extends Component {
             time: this.time.value,
             category: this.category.value,
             location: this.location.value,
-            locationUrl: this.locationUrl,
+            locationUrl: this.locationUrl.value,
             address: this.address.value,
             floor: this.floor.value,
             room: this.room.value,
-            details: this.details.value,
+            description: this.description.value,
         }
         const message = 'Your event was submitted!';
         this.setState({
             success: [message],
             EventInput: [EventInfo],
         });
+        document.getElementById("event-input").reset();
     }
     render() {
         return (
@@ -47,24 +48,24 @@ class InputForm extends Component {
                             <label>Registration URL:</label>
                             <input ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                             <label>Time:</label>
-                            <input ref={(input) => this.time = input} type="text" name="time" />
+                            <input ref={(input) => this.time = input} type="text" name="Time" />
                             <hr></hr>
                             <label>Event Category:</label>
-                            <input ref={(input) => this.category = input} type="text" name="category" />
+                            <input ref={(input) => this.category = input} type="text" name="Category" />
                             <hr></hr>
                             <label>Location:</label>
-                            <input ref={(input) => this.location = input} type="text" />
+                            <input ref={(input) => this.location = input} type="text" name="Location"/>
                             <label>Location URL</label>
-                            <input ref={(input) => this.locationUrl = input} type="text"/>
+                            <input ref={(input) => this.locationUrl = input} type="text" name="Location URL"/>
                             <label>Address:</label>
-                            <input ref={(input) => this.address = input} type="text" />
+                            <input ref={(input) => this.address = input} type="text" name="Address"/>
                             <label>Floor</label>
-                            <input ref={(input) => this.floor = input} type="text" />
+                            <input ref={(input) => this.floor = input} type="text" name="Floor"/>
                             <label>Room:</label>
-                            <input ref={(input) => this.room = input} type="text" name="room" />
+                            <input ref={(input) => this.room = input} type="text" name="Room" />
                             <hr></hr>
-                            <label>Event Details:</label>
-                            <textarea ref={(input) => this.details = input} type="text" name="Event Details" />
+                            <label>Event Description:</label>
+                            <textarea ref={(input) => this.description = input} type="text" name="Event Description" />
                             <input type="submit" value="Add Event" />
                             <input type="submit" value="Clear Form" />
                             <p id="message">{this.state.success}</p>

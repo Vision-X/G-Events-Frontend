@@ -61,7 +61,7 @@ class EditEvents extends Component {
                                         <input ref={(input) => this.room = input} type="text" name="room" />
                                         <hr></hr>
                                         <label>Event Description:</label>
-                                        <textarea ref={(input) => this.details = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                        <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Update Event" />
                                         <input type="submit" value="Delete Event" />
                                     </form>

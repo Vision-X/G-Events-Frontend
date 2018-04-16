@@ -34,32 +34,32 @@ class AddEvents extends Component {
                                     <h1>Galvanize Events</h1>
                                     <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
                                         <label>Month:</label>
-                                        <input ref={(input) => this.month = input} type="text" defaultValue={eventInfo.month} />
+                                        <input ref={(input) => this.month = input} type="text" name="Month" />
                                         <label>Day:</label>
-                                        <input ref={(input) => this.day = input} type="text" defaultValue={eventInfo.day} />
+                                        <input ref={(input) => this.day = input} type="text" Name="Day" />
                                         <label>Event Title:</label>
-                                        <input ref={(input) => this.title = input} type="text" name="Event Title" defaultValue={eventInfo.title} />
+                                        <input ref={(input) => this.title = input} type="text" name="Event Title" />
                                         <label>Registration URL:</label>
                                         <input ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                                         <label>Time:</label>
-                                        <input ref={(input) => this.time = input} type="text" name="time" defaultValue={eventInfo.time} />
+                                        <input ref={(input) => this.time = input} type="text" name="Time" />
                                         <hr></hr>
                                         <label>Event Category:</label>
-                                        <input ref={(input) => this.category = input} type="text" name="category" defaultValue={eventInfo.category} />
+                                        <input ref={(input) => this.category = input} type="text" name="Category" />
                                         <hr></hr>
                                         <label>Location:</label>
-                                        <input ref={(input) => this.location = input} type="text" defaultValue={eventInfo.location} />
+                                        <input ref={(input) => this.location = input} type="text" name="Location" />
                                         <label>Location URL</label>
-                                        <input ref={(input) => this.locationUrl = input} type="text" />
+                                        <input ref={(input) => this.locationUrl = input} type="text" name="Location URL" />
                                         <label>Address:</label>
-                                        <input ref={(input) => this.address = input} type="text" />
+                                        <input ref={(input) => this.address = input} type="text" name="Address" />
                                         <label>Floor</label>
-                                        <input ref={(input) => this.floor = input} type="text" />
+                                        <input ref={(input) => this.floor = input} type="text" name="Floor" />
                                         <label>Room:</label>
-                                        <input ref={(input) => this.room = input} type="text" name="room" />
+                                        <input ref={(input) => this.room = input} type="text" name="Room" />
                                         <hr></hr>
                                         <label>Event Description:</label>
-                                        <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                        <textarea ref={(input) => this.description = input} type="text" name="Event Description" />
                                         <input type="submit" value="Add Event" />
                                         <input type="submit" value="Delete Event" />
                                     </form>
