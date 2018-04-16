@@ -27,8 +27,8 @@ class EventsPage extends Component {
     var dataObj = this.state.data;
     return (
       <div id="map-page">
-          {
-            dataObj.sort((a,b) => a.day - b.day).map(eventInfo => {
+        {
+          dataObj.sort((a, b) => a.day - b.day).map(eventInfo => {
             return (
               <div id={eventInfo.id} className="event-detail-card content">
                 <div className="grid grid--gutters title-block">
@@ -63,10 +63,9 @@ class EventsPage extends Component {
                 <hr className="short"></hr>
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
-                    <p className="details">
-                      {eventInfo.description}
-                      <a href="/map/L4">4th Floor </a>
-                    <a href="/map/2">Picachu - Room Directions</a></p>
+                    <p className="details">{eventInfo.description}</p>
+                    <a href="/map/L4">4th Floor </a>
+                    <a href="/map/2">Picachu - Room Directions</a>
                   </div>
                 </div>
               </div>
