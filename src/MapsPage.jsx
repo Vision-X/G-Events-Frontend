@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import ToggleDisplay from 'react-toggle-display';
-// import { CSSTransitionGroup } from 'react-transition-group'
 
-
-// const url = "https://g-events-api.herokuapp.com/rooms";
 const LLlandscapeUrl = 'http://g-events-api.herokuapp.com/map-images/LL-PlatteFloorLandscapeMap.png'
 const L3landscapeUrl = 'http://g-events-api.herokuapp.com/map-images/L3-PlatteFloorLandscapeMap.png'
 const L4landscapeUrl = 'http://g-events-api.herokuapp.com/map-images/L4-PlatteFloorLandscapeMap.png'
@@ -16,42 +13,21 @@ class MapsPage extends Component {
     super();
     this.state = {
       roomsData: [],
-      // Levels: {
-      // LLlandscapeUrl,
-      // LLportraitUrl,
-      // L3landscapeUrl,
-      // L3portraitUrl,
-      // L4landscapeUrl,
-      // L4portraitUrl,
       selectedPortraitMap: '',
       selectedLandscapeMap: '',
       selectedFloor: '',
       selectedFloorRooms: [],
       selectedRoom: 'LL',
       roomsDisplayed: false
-      // }
     };
     this._onClick = this._onClick.bind(this);
   };
 
-  // getMaps() {
-  //   this.setState({LLlandscapeUrl});
-  //   this.setState({LLportraitUrl});
-  //   this.setState({L3landscapeUrl});
-  //   this.setState({L3portraitUrl});
-  //   this.setState({L4landscapeUrl});
-  //   this.setState({L4portraitUrl});
-  //   this.setState({selectedPortraitMap: ''});
-  //   this.setState({selectedLandscapeMap: ''});
-  //   this.setState({selectedFloor: ''});
-  // };
 
   getRooms() {
     const roomsUrl = "https://g-events-api.herokuapp.com/rooms"
     let dataGrab = (response) => {
-      // console.log(response);
       this.setState({roomsData: response.rooms});
-        // console.log(this.state.roomsData);
     };
     return fetch(roomsUrl)
           .then(response => response.json())
@@ -64,7 +40,6 @@ class MapsPage extends Component {
     let selectedFloorRooms = []
     this.state.roomsData.forEach((room) => {
       if (room.level === floor) {
-        // console.log(room);
         selectedFloorRooms.push(room)
       }
     })
@@ -74,15 +49,9 @@ class MapsPage extends Component {
 
   getMapFromUrl(pathname) {
     console.log("from getMapFromUrl", pathname);
-    // if /maps in srting
-    //     trim /maps,
-    //     then check to see floor or room exist
-    //     if floor or room exist set map
-    //     else set url to maps  -- > window.location = '/maps'
   }
 
   componentWillMount() {
-    // this.getMaps();
     this.getRooms();
   };
 
@@ -110,9 +79,6 @@ class MapsPage extends Component {
           document.querySelector("#bottom").scrollIntoView();
         });
       } else if (event.target.textContent === 'Rooms')  {
-        // toggle show rooms list
-
-        // (!this.state.roomsDisplayed) ? (console.log("todo: toggle show rooms list")) & (console.log("todo: toggle show rooms list2")) : null
         // if
         (this.state.roomsDisplayed)
         ?
@@ -129,12 +95,6 @@ class MapsPage extends Component {
     if (event.target.classList.contains('room')) {
       console.log("todo: change map and hide rooms list");
     }
-    setTimeout(function(){
-      // var element = document.querySelector("#bottom");
-      // document.querySelector("#bottom").scrollIntoView();
-    }, 2700);
-    // console.log(this.state.selectedFloor);
-    // this.getFloorRooms(this.state.selectedFloor);
   }
 
   render() {
