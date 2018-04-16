@@ -50,32 +50,37 @@ class EventsPage extends Component {
                     <h2 className="title">{eventInfo.title}</h2>
                     <p className="time">
                       {eventInfo.time}
-                      <hr className="short"></hr>
-                      <span>{eventInfo.category}</span>
                     </p>
+                    <span className="category">{eventInfo.category}</span>
+                  </div>
+                  <div>
+                    <a className="event-page-button" target="_blank" href={eventInfo.registerUrl}>Register Here</a>
                   </div>
                 </div>
                 <hr></hr>
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
-                    <p className="address">
-                      <h4>
-                        {eventInfo.location}
-                      </h4>
-                      <p>1644 Platte Street</p>
-                      <p>Denver, CO 80202</p>
-                      <span><a target="_blank" href={eventInfo.registerUrl}>register here</a></span>
-                    </p>
+                    <h4>Event Description</h4>
+                    <p className="details">{eventInfo.description}</p>
                   </div>
                 </div>
                 <hr className="short"></hr>
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
-                    <p className="details">{eventInfo.description}</p>
-                    <a className="map-link" href="/maps/${eventInfo.floor}">{eventInfo.floor}</a>
-                    <a className="map-link" href="/maps/${eventInfo.room}">{eventInfo.room}</a>
+                    <div className="address">
+                      <a target="_blank" href={eventInfo.locationUrl}>{eventInfo.location}</a>
+                      <p>1644 Platte Street</p>
+                      <p>Denver, CO 80202</p>
+                      <p>Floor: {eventInfo.floor}</p>
+                      <p>Room: {eventInfo.room}</p>
+                    </div>
+                    <div>
+                      <a className="map-link event-page-button" href="/maps/${eventInfo.floor}">Floor Map</a>
+                      <a className="map-link event-page-button" href="/maps/${eventInfo.room}">Room Map</a>
+                    </div>
                   </div>
                 </div>
+                <hr className="short"></hr>
               </div>
             )
           })
