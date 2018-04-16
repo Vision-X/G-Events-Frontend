@@ -15,10 +15,13 @@ class InputForm extends Component {
             month: this.month.value,
             day: this.day.value,
             title: this.title.value,
+            registerUrl: this.registerUrl.value,
             time: this.time.value,
             category: this.category.value,
             location: this.location.value,
+            locationUrl: this.locationUrl,
             address: this.address.value,
+            floor: this.floor.value,
             room: this.room.value,
             details: this.details.value,
         }
@@ -41,6 +44,8 @@ class InputForm extends Component {
                             <input ref={(input) => this.day = input} type="text" Name="Day" />
                             <label>Event Title:</label>
                             <input ref={(input) => this.title = input} type="text" name="Event Title" />
+                            <label>Registration URL:</label>
+                            <input ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                             <label>Time:</label>
                             <input ref={(input) => this.time = input} type="text" name="time" />
                             <hr></hr>
@@ -49,8 +54,12 @@ class InputForm extends Component {
                             <hr></hr>
                             <label>Location:</label>
                             <input ref={(input) => this.location = input} type="text" />
+                            <label>Location URL</label>
+                            <input ref={(input) => this.locationUrl = input} type="text"/>
                             <label>Address:</label>
                             <input ref={(input) => this.address = input} type="text" />
+                            <label>Floor</label>
+                            <input ref={(input) => this.floor = input} type="text" />
                             <label>Room:</label>
                             <input ref={(input) => this.room = input} type="text" name="room" />
                             <hr></hr>

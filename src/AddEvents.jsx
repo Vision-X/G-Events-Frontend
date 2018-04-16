@@ -34,22 +34,32 @@ class AddEvents extends Component {
                                     <h1>Galvanize Events</h1>
                                     <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
                                         <label>Month:</label>
-                                        <input type="text" defaultValue={eventInfo.month} />
+                                        <input ref={(input) => this.month = input} type="text" defaultValue={eventInfo.month} />
                                         <label>Day:</label>
-                                        <input type="text" defaultValue={eventInfo.day} />
+                                        <input ref={(input) => this.day = input} type="text" defaultValue={eventInfo.day} />
                                         <label>Event Title:</label>
-                                        <input type="text" name="Event Title" defaultValue={eventInfo.title} />
+                                        <input ref={(input) => this.title = input} type="text" name="Event Title" defaultValue={eventInfo.title} />
+                                        <label>Registration URL:</label>
+                                        <input ref={(input) => this.registerUrl = input} type="text" name="Registration URL" />
                                         <label>Time:</label>
-                                        <input type="text" name="time" defaultValue={eventInfo.time} />
+                                        <input ref={(input) => this.time = input} type="text" name="time" defaultValue={eventInfo.time} />
                                         <hr></hr>
                                         <label>Event Category:</label>
-                                        <input type="text" name="category" defaultValue={eventInfo.category} />
+                                        <input ref={(input) => this.category = input} type="text" name="category" defaultValue={eventInfo.category} />
                                         <hr></hr>
                                         <label>Location:</label>
-                                        <input type="text" defaultValue={eventInfo.location} />
+                                        <input ref={(input) => this.location = input} type="text" defaultValue={eventInfo.location} />
+                                        <label>Location URL</label>
+                                        <input ref={(input) => this.locationUrl = input} type="text" />
+                                        <label>Address:</label>
+                                        <input ref={(input) => this.address = input} type="text" />
+                                        <label>Floor</label>
+                                        <input ref={(input) => this.floor = input} type="text" />
+                                        <label>Room:</label>
+                                        <input ref={(input) => this.room = input} type="text" name="room" />
                                         <hr></hr>
                                         <label>Event Description:</label>
-                                        <textarea type="text" name="Event Description" defaultValue={eventInfo.description} />
+                                        <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
                                         <input type="submit" value="Add Event" />
                                         <input type="submit" value="Delete Event" />
                                     </form>
