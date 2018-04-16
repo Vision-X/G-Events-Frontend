@@ -119,9 +119,17 @@ a.navbar-brand img {
   /* width: 33%; */
 }
 
+#home {
+  display:block;
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
 button.landing {
-  font-size: 220%;
-  min-height: 30vh;
+  font-size: 210%;
+  min-height: 20vh;
   width: 80vw;
 }
 
@@ -170,6 +178,11 @@ button.landing:active, button.floors:active {
 
 .event-detail-card:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+#message {
+  color: red;
+  font-size: 1.5rem;
 }
 
 nav ul {
