@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 class InputForm extends Component {
     constructor() {
         super();
-        this.state = {
-            EventInput: [],
-            success: []
-        };
         this._onClick = this._onClick.bind(this);
     }
 
@@ -15,10 +11,11 @@ class InputForm extends Component {
           month: this.month.value,
           day: this.day.value,
           title: this.title.value,
+          registerUrl: this.registerUrl.value,
           time: this.time.value,
-          category: this.category.value || '',
+          category: this.category.value,
           location: this.location.value,
-          locationUrl: this.locationUrl,
+          locationUrl: this.locationUrl.value,
           floor: this.floor.value,
           room: this.room.value,
           description: this.description.value,
@@ -52,79 +49,38 @@ class InputForm extends Component {
 
     postFormData() {
           const postUrl = 'https://g-events-api.herokuapp.com/events';
-          // console.log(this.getFormData(), "postForm function");
-          let myData = JSON.stringify(this.getFormData());
-          console.log(myData, "myData");
+          let myData = this.getFormData();
           fetch(postUrl, {
             method: "POST",
             headers: {
               "Accept": "application/json",
               "Content-Type": "application/json"
             },
-            body: myData
+            body: JSON.stringify(myData)
           })
             .then(response => response.json())
             .then(response => {
 
               let message = document.querySelector("#message");
               message.textContent = 'Your event was submitted!';
+              setTimeout(() => {
+                message.textContent = '';
+              }, 4000);
             })
             .catch(err => console.log(err));
+            document.getElementById('event-input').reset();
     }
 
 
     _onClick(e) {
-      console.log(e.target);
-      console.log(e.target.id);
       if (e.target.id === 'add-event') {
-        console.log("ready to Post...");
         this.getFormData();
-        console.log(this.getFormData(), "form data to POST");
       }
     }
 
     onSubmit(e) {
         e.preventDefault();
-        console.log("onSubmit...  ", this.getFormData());
         this.postFormData();
-        // console.log(e.target.id);
-        // if (e.target.id === 'add-event') {
-        //   console.log("add event buttn clicked");
-        //   console.log(this.getFormData(), "freshhh form data ");
-        //   this.getFormData();
-        //   function postFormData() {
-        //     const postUrl = 'https://g-events-api.herokuapp.com/events';
-        //     fetch(postUrl, {
-        //       method: "POST",
-        //       header: {
-        //         "Content-Type": "application/json"
-        //       },
-        //       body: JSON.stringify(this.getFormData())
-        //     })
-        //       .then(response => response.json())
-        //       .then(response => {
-        //         let message = 'Your event was submitted!';
-        //       })
-        //       .catch(err => console.log(err));
-        //   }
-        //   postFormData();
-
-        // const EventInfo = {
-        //     month: this.month.value,
-        //     day: this.day.value,
-        //     title: this.title.value,
-        //     time: this.time.value,
-        //     category: this.category.value,
-        //     location: this.location.value,
-        //     address: this.address.value,
-        //     room: this.room.value,
-        //     details: this.details.value,
-        // }
-        // const message = 'Your event was submitted!';
-        // this.setState({
-        //     success: [message],
-        //     EventInput: [EventInfo],
-        // });
     }
 
     render() {
@@ -151,7 +107,7 @@ class InputForm extends Component {
                             <label>Location:</label>
                             <input id="location" ref={(input) => this.location = input} type="text" />
                             <label>Location URL</label>
-                            <input id="location-url" ref={(input) => this.locationUrl = input} type="text" name="Location URL"/>
+                            <input id="location-url" defaultValue="https://www.galvanize.com/campuses/denver-platte" ref={(input) => this.locationUrl = input} type="text" name="Location URL"/>
                             <label>Address:</label>
                             <input id="address" ref={(input) => this.address = input} type="text" />
                             <label>Floor:</label>
@@ -163,7 +119,7 @@ class InputForm extends Component {
                             <textarea id="description" ref={(input) => this.description = input} type="text" name="Event Description" />
                             <input id="add-event" type="submit" value="Add Event" />
                             <input type="submit" value="Clear Form" />
-                            <p id="message">{this.state.success}</p>
+                            <p id="message"></p>
                         </form>
                     </div>
                 </div>
