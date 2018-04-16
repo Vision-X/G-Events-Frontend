@@ -11,7 +11,7 @@ class Header extends Component {
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand mx-auto">
-                  <img class="img-fluid" src="/assets/galvanize-logo-2.png" alt="gSchool logo" />
+                  <img className="img-fluid" src="/assets/galvanize-logo-2.png" alt="gSchool logo" />
                 </a>
               </div>
               <h3>Events Locator</h3>

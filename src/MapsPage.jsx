@@ -15,7 +15,7 @@ class MapsPage extends Component {
   constructor() {
     super();
     this.state = {
-      // mapData: [],
+      roomsData: [],
       Levels: {
         LLlandscapeUrl,
         LLportraitUrl,
@@ -25,7 +25,8 @@ class MapsPage extends Component {
         L4portraitUrl,
         selectedPortraitMap: '',
         selectedLandscapeMap: '',
-        selectedFloor: ''
+        selectedFloor: '',
+        selectedRoom: ''
       }
     };
     this._onClick = this._onClick.bind(this);
@@ -48,6 +49,27 @@ class MapsPage extends Component {
     //       .then(response => response.json())
     //       .then(dataGrab)
     //       .catch()
+  };
+
+  getRooms() {
+    const roomsUrl = "https://g-events-api.herokuapp.com/rooms"
+    let dataGrab = (response) => {
+      console.log(dataGrab);
+      this.setState({roomsData: response});
+            this.setState({LLlandscapeUrl});
+            this.setState({LLportraitUrl});
+            this.setState({L3landscapeUrl});
+            this.setState({L3portraitUrl});
+            this.setState({L4landscapeUrl});
+            this.setState({L4portraitUrl});
+            this.setState({selectedPortraitMap: ''});
+            this.setState({selectedLandscapeMap: ''});
+            this.setState({selectedFloor: ''});
+    };
+    return fetch(roomsUrl)
+          .then(response => response.json())
+          .then(dataGrab)
+          .catch()
   };
 
   componentWillMount() {
@@ -97,7 +119,8 @@ class MapsPage extends Component {
           </div>
         </ToggleDisplay>
 
-        <ToggleDisplay show={!this.state.selectedPortraitMap == ''}>
+        {/* // eslint-disable-next-line */}
+        <ToggleDisplay show={(!this.state.selectedPortraitMap) == ''}>
           <div className="btn-group fixed-bottom}">
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'LL') ? 'selected' : null)}>Lower Level</button>
             <button onClick={this._onClick} className={"basic-button btn btn-secondary map-button " + ((this.state.selectedFloor === 'L3') ? 'selected' : null)}>3rd Floor</button>
