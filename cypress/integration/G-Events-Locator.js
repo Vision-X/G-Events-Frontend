@@ -1,5 +1,5 @@
 describe('G-Events Page', function () {
-  it('Should assert Events page works', function () {
+  it('Should assert Events page renders correctly', function () {
 
     cy.visit('https://g-events-locator.firebaseapp.com/')
 
@@ -10,6 +10,8 @@ describe('G-Events Page', function () {
     cy.get('button').eq(0).click()
 
     cy.url().should('include', '/events')
+
+    cy.title().should('include', 'G-Events Locator')
 
     cy.get('ul li').as('NavLi')
 
@@ -26,7 +28,7 @@ describe('G-Events Page', function () {
 })
 
 describe('G-Events Map', function () {
-  it('Should assert Maps page works', function () {
+  it('Should assert Maps page renders correctly', function () {
 
     cy.visit('https://g-events-locator.firebaseapp.com/')
 
@@ -35,6 +37,8 @@ describe('G-Events Map', function () {
     cy.get("button").eq(1).click()
 
     cy.url().should('contain', "/maps")
+
+    cy.title().should('include', 'G-Events Locator')
 
     cy.get("img").should("have.attr", "src", "/assets/galvanize-logo-2.png")
 
