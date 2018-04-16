@@ -25,10 +25,18 @@ class EventsPage extends Component {
 
   render() {
     var dataObj = this.state.data;
+    var months = ["jan", "feb", "mar", "apr", "may", "jun",
+      "jul", "aug", "sep", "oct", "nov", "dec"];
     return (
       <div id="map-page">
-        {
-          dataObj.sort((a, b) => a.day - b.day).map(eventInfo => {
+        {dataObj.sort(function(a, b) {
+          let aMonth = a.month.toLowerCase().substring(0,3);
+          let bMonth = b.month.toLowerCase().substring(0,3);
+          if (aMonth == bMonth) {
+            return a.day - b.day
+          }
+          return months.indexOf(aMonth) - months.indexOf(bMonth)
+        }).map(eventInfo => {
             return (
               <div id={eventInfo.id} className="event-detail-card content">
                 <div className="grid grid--gutters title-block">

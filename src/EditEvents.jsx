@@ -6,6 +6,7 @@ class EditEvents extends Component {
         this.state = {
             data: []
         }
+        this._onClick = this._onClick.bind(this);
     }
 
     getEvents() {
@@ -19,20 +20,61 @@ class EditEvents extends Component {
             .catch()
     }
 
+    getTheId(e) {
+      let theId = this.id;
+      return theId;
+    }
+
+    updateEventData(e) {
+      e.preventDefault();
+      // let theId = this.getTheId();
+      // const updateUrl = "https://g-events-api.herokuapp.com/events" + theId;
+    }
+
+    deleteEventData(e) {
+      e.preventDefault();
+      const deleteUrl = "";
+    }
+
+    _onClick(e) {
+      e.preventDefault();
+
+      console.log(e.target.id, "this should say UPDATE or DELETE");
+      if (e.target.id === 'update') {
+        let daId = this.getTheId();
+        console.log(daId);
+        //run the update by id function
+      } else if (e.target.id === 'delete') {
+        //run the delete by id function
+        let daId = this.getTheId();
+        console.log(daId);
+      }
+    }
+
     componentWillMount() {
-        this.getEvents();
+      this.getEvents();
     }
 
     render() {
+        let sortedEvents = this.state.data;
+        var months = ["jan", "feb", "mar", "apr", "may", "jun",
+          "jul", "aug", "sep", "oct", "nov", "dec"];
         return (
             <div>
-                {this.state.data.map(eventInfo => {
+                {sortedEvents.sort(function(a, b) {
+                  let aMonth = a.month.toLowerCase().substring(0,3);
+                  let bMonth = b.month.toLowerCase().substring(0,3);
+                  if (aMonth == bMonth) {
+                    return a.day - b.day
+                  }
+                  return months.indexOf(aMonth) - months.indexOf(bMonth)
+                }).map(eventInfo => {
                     return (
                         <div className="event-detail-card content event-form">
                             <div className="grid grid--gutters title-block">
                                 <div className="event-detail-block">
                                     <h1>DB Event</h1>
-                                    <form id="event-input" onSubmit={(e) => this.onSubmit(e)}>
+                                    <form className="event-input" onClick={this._onClick} onSubmit={(e) => this.onSubmit(e)}>
                                         <label>Event ID:</label>
                                         <input ref={(input) => this.id = input} type="text" value={eventInfo.id} />
                                         <label>Month:</label>
@@ -62,15 +104,15 @@ class EditEvents extends Component {
                                         <hr></hr>
                                         <label>Event Description:</label>
                                         <textarea ref={(input) => this.description = input} type="text" name="Event Description" defaultValue={eventInfo.description} />
-                                        <input type="submit" value="Update Event" />
-                                        <input type="submit" value="Delete Event" />
+                                        <input id="update" type="submit" value="Update Event" />
+                                        <input id="delete" type="submit" value="Delete Event" />
                                     </form>
                                 </div>
                             </div>
                         </div>
                     )
                 }
-                )}
+              )}
             </div>
         )
     }
