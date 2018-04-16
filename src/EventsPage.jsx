@@ -64,8 +64,8 @@ class EventsPage extends Component {
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
                     <p className="details">{eventInfo.description}</p>
-                    <a href="/map/L4">4th Floor </a>
-                    <a href="/map/2">Picachu - Room Directions</a>
+                    <a className="map-link" href="/maps/${eventInfo.floor}">{eventInfo.floor}</a>
+                    <a className="map-link" href="/maps/${eventInfo.room}">{eventInfo.room}</a>
                   </div>
                 </div>
               </div>
