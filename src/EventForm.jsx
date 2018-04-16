@@ -14,14 +14,15 @@ class InputForm extends Component {
         return {
           month: this.month.value,
           day: this.day.value,
-          title: this.title.value,
-          time: this.time.value,
-          category: this.category.value || '',
           location: this.location.value,
-          locationUrl: this.locationUrl,
+          locationUrl: '',
+          title: this.title.value,
+          registerUrl: '',
+          time: this.time.value,
+          category: this.category.value,
+          description: this.description.value,
           floor: this.floor.value,
           room: this.room.value,
-          description: this.description.value,
         }
       // var month = document.querySelector("#month");
       // var day = document.querySelector("#day");
@@ -152,8 +153,6 @@ class InputForm extends Component {
                             <input id="location" ref={(input) => this.location = input} type="text" />
                             <label>Location URL</label>
                             <input id="location-url" ref={(input) => this.locationUrl = input} type="text" name="Location URL"/>
-                            <label>Address:</label>
-                            <input id="address" ref={(input) => this.address = input} type="text" />
                             <label>Floor:</label>
                             <input id="floor" ref={(input) => this.floor = input} type="text" name="floor" />
                             <label>Room:</label>
