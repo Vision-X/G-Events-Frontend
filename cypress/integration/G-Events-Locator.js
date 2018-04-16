@@ -27,6 +27,31 @@ describe('G-Events Page', function () {
   })
 })
 
+describe('G-Events Page', function () {
+  it('Should assert Admin page renders correctly', function () {
+
+    cy.visit('https://g-events-locator.firebaseapp.com/admin/events')
+
+    cy.title().should('include', 'G-Events Locator')
+
+    cy.get("img").should("have.attr", "src", "/assets/galvanize-logo-2.png")
+
+    cy.get('input').eq(0).should('be.empty')
+
+    cy.get('input').eq(1).should('be.empty')
+
+    cy.get('input').eq(2).should('be.empty')
+
+    cy.get('input').eq(3).should('be.empty')
+
+    cy.get('input').eq(4).should('be.empty')
+
+    cy.get('input').eq(5).should('be.empty')
+
+    cy.get('input').eq(6).should('be.empty')
+  })
+})
+
 describe('G-Events Map', function () {
   it('Should assert Maps page renders correctly', function () {
 
