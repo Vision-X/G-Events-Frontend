@@ -180,6 +180,11 @@ button.landing:active, button.floors:active {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+#message {
+  color: red;
+  font-size: 1.5rem;
+}
+
 nav ul {
   display: flex;
   list-style-type: none;
