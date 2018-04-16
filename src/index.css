@@ -12,6 +12,18 @@ body {
 
 }
 
+
+header {
+    position: fixed;
+}
+
+@media only screen and (max-width: 720px) {
+    header {
+        position: absolute;
+    }
+}
+
+
 div h1 {
   color: #F79020;
   font-size: 2rem;
@@ -294,6 +306,7 @@ label {
   width: 100vw;
   background-color: #003b4d;
   padding: 8px;
+  margin-top: 12rem;
   display: none;
 }
 
