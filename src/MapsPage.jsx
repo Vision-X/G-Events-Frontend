@@ -180,25 +180,22 @@ class MapsPage extends Component {
               <img className="img-fluid landscape" src={this.state.selectedLandscapeMap}  alt="" />
             </div>
           </div>
-
           {/* show if a floor is selected */}
           <ToggleDisplay show={this.state.roomsDisplayed}>
-            {/*<div className="room-map-container">
-              <img className="img-fluid portrait" src="./assets/galvanize-logo-2.png" alt=""/>
-              <div className="">
-                <img className="img-fluid landscape" src="./assets/galvanize-logo-2.png" alt=""/>
-              </div>
-            </div>*/}
+            <div className="room-list">
+                {this.state.selectedFloorRooms.map(floorRoomName => {
+                  return (
+                    <div key={floorRoomName.id} className="event-detail-card room">
+                      <h1 id={floorRoomName.id} onClick={this._onClick}>{floorRoomName.name}</h1>
+                    </div>
+                  )
+                })
+              }
 
-            {this.state.selectedFloorRooms.map(floorRoomName => {
-              return (
-                <div key={floorRoomName.id} className="event-detail-card content">
-                  <h1 className="room" onClick={this._onClick}>{floorRoomName.name}</h1>
-                </div>
-              )
-            })
-          }
+            </div>
           </ToggleDisplay>
+
+
 
         </ToggleDisplay>
 
