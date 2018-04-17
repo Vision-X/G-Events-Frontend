@@ -52,7 +52,7 @@ class EventsPage extends Component {
           })
           .map(eventInfo => {
             return (
-              <div id={eventInfo.id} className="event-detail-card content">
+              <div key={eventInfo.id * 100 + eventInfo.title.length} id={eventInfo.id} className="event-detail-card content">
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
                     <div className="box">
@@ -62,7 +62,7 @@ class EventsPage extends Component {
                       <h6 className="day">{eventInfo.day}</h6>
                     </div>
                   </div>
-                  <div className="grid-cell">
+                  <div className="grid-cell title-card">
                     <h2 className="title">{eventInfo.title}</h2>
                     <p className="time">
                       {eventInfo.time}
@@ -74,21 +74,18 @@ class EventsPage extends Component {
                 <br></br>
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
-                  <a target="_blank" href={eventInfo.registerUrl} class="btn btn-sm btn-outline-info">register here</a>
                     <h4>
                       {eventInfo.location}
                     </h4>
-
-                    <hr></hr>
                     <div className="address">
                       <span>1644 Platte Street</span>
                       <span>Denver, CO 80202</span>
                       <br></br>
+                      <a target="_blank" href={eventInfo.registerUrl} className="btn btn-sm btn-outline-info">register here</a>
 
                     </div>
                   </div>
                 </div>
-                <hr className="short" />
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
                     <p className="details">

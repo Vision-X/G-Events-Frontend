@@ -94,7 +94,7 @@ class MapsPage extends Component {
       console.log("todo: change map and hide rooms list");
       this.setState({ roomsDisplayed: false });
       const roomId = event.target.id;
-      let selectedRoom = "";
+      // let selectedRoom = "";
       // console.log(this.state.roomsData)
       this.state.selectedFloorRooms.forEach(room => {
         // console.log(roomId);
