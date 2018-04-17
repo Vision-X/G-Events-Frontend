@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class EventsPage extends Component {
   constructor() {
     super();
     this.state = {
       data: []
-    }
+    };
   }
 
   getEvents() {
     const url = "https://g-events-api.herokuapp.com/events";
-    let dataGrab = (response) => {
+    let dataGrab = response => {
       this.setState({ data: response });
     };
     return fetch(url)
       .then(response => response.json())
       .then(dataGrab)
-      .catch()
+      .catch();
   }
 
   componentWillMount() {
@@ -25,24 +25,40 @@ class EventsPage extends Component {
 
   render() {
     var dataObj = this.state.data;
-    var months = ["jan", "feb", "mar", "apr", "may", "jun",
-      "jul", "aug", "sep", "oct", "nov", "dec"];
+    var months = [
+      "jan",
+      "feb",
+      "mar",
+      "apr",
+      "may",
+      "jun",
+      "jul",
+      "aug",
+      "sep",
+      "oct",
+      "nov",
+      "dec"
+    ];
     return (
       <div id="map-page">
-        {dataObj.sort(function(a, b) {
-          let aMonth = a.month.toLowerCase().substring(0,3);
-          let bMonth = b.month.toLowerCase().substring(0,3);
-          if (aMonth === bMonth) {
-            return a.day - b.day
-          }
-          return months.indexOf(aMonth) - months.indexOf(bMonth)
-        }).map(eventInfo => {
+        {dataObj
+          .sort(function(a, b) {
+            let aMonth = a.month.toLowerCase().substring(0, 3);
+            let bMonth = b.month.toLowerCase().substring(0, 3);
+            if (aMonth === bMonth) {
+              return a.day - b.day;
+            }
+            return months.indexOf(aMonth) - months.indexOf(bMonth);
+          })
+          .map(eventInfo => {
             return (
               <div id={eventInfo.id} className="event-detail-card content">
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
                     <div className="box">
-                      <h4 className="month">{eventInfo.month.substring(0, 3)}</h4>
+                      <h4 className="month">
+                        {eventInfo.month.substring(0, 3)}
+                      </h4>
                       <h6 className="day">{eventInfo.day}</h6>
                     </div>
                   </div>
@@ -72,7 +88,7 @@ class EventsPage extends Component {
                     </div>
                   </div>
                 </div>
-                <hr className="short"></hr>
+                <hr className="short" />
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
                     <p className="details">
@@ -84,12 +100,11 @@ class EventsPage extends Component {
                   </div>
                 </div>
               </div>
-            )
-          })
-        }
+            );
+          })}
       </div>
-    )
+    );
   }
-};
+}
 
 export default EventsPage;
