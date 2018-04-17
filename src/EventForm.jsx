@@ -20,31 +20,6 @@ class InputForm extends Component {
           room: this.room.value,
           description: this.description.value,
         }
-      // var month = document.querySelector("#month");
-      // var day = document.querySelector("#day");
-      // var title = document.querySelector("#title");
-      // var time = document.querySelector("#time");
-      // var category = document.querySelector("#category");
-      // var location = document.querySelector("#location");
-      // var address = document.querySelector("#address");
-      // var room = document.querySelector("#room");
-      // var description = document.querySelector("#description")
-      // var floor = document.querySelector("#floor")
-      //
-      // const data = new FormData(document.querySelector('#event-input'));
-      // return {
-      //   month: data.get(month),
-      //   day: data.get(day),
-      //   location: data.get(location),
-      //   locationUrl: "https://www.galvanize.com/campuses/denver-platte",
-      //   title: data.get(title),
-      //   registerUrl: '',
-      //   time: data.get(time),
-      //   category: data.get(category),
-      //   description: data.get(description),
-      //   floor: data.get(floor),
-      //   room: data.get(room)
-      // };
     }
 
     postFormData() {
