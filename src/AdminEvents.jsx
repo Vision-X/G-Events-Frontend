@@ -4,6 +4,29 @@ import EditEvents from './EditEvents.jsx';
 import EventForm from './EventForm';
 
 class AdminEvents extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    }
+  }
+
+  getEvents() {
+      const url = "https://g-events-api.herokuapp.com/events";
+      let dataGrab = (response) => {
+          this.setState({ data: response });
+      };
+      return fetch(url)
+          .then(response => response.json())
+          .then(dataGrab)
+          .then(console.log("hey bitch"))
+          .catch()
+  }
+
+  componentDidMount() {
+    this.getEvents();
+  }
+
     render() {
         return (
             <div>
@@ -13,7 +36,7 @@ class AdminEvents extends Component {
                 </div>
                 <div>
                     <h1>Live Events</h1>
-                    <EditEvents />
+                    <EditEvents data={this.state.data} />
                 </div>
                 <div>
                     <h1>Galvanize Events To Add</h1>
