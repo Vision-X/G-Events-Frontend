@@ -154,7 +154,7 @@ class InputForm extends Component {
                 name="Event Description"
               />
               <input id="add-event" type="submit" value="Add Event" />
-              <input type="submit" value="Clear Form" />
+              <input type="reset" value="Clear Form" />
               <p id="message" />
             </form>
           </div>
