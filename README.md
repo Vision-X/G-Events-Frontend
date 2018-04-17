@@ -192,9 +192,21 @@ Jasen: working on Maps-Rooms page
 
 2. Create technologies-used slide
 
-3. last-minute styling details
+3. Discuss challenges slide
 
-4. Review presentation flow
+4. last-minute styling details
 
+5. Review presentation flow
 
+### Challenges
+
+1. Figuring out the routes
+
+2. POST request
+
+3. Figuring out the group dynamic
+
+4. Smoothing out the GitHub workflow
+
+5. Using Google Maps library in React
 
