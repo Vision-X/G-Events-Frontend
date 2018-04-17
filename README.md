@@ -1,5 +1,9 @@
 # Project: G-Events Locator
 
+Back-End: http://g-events-api.herokuapp.com
+
+App: https://g-events-locator.firebaseapp.com
+
 ## GitHub Workflow
 
 Individual branches:
@@ -178,6 +182,17 @@ Marlow: getting POST request to work
 
 Jasen: working on Maps-Rooms page
 
+## Day 5
+
+### To Do's
+
+1. Integrate video demo into slideshow presentation
+
+2. Create technologies-used slide
+
+3. last-minute styling details
+
+4. Review presentation flow
 
 
 
