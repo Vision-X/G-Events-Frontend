@@ -204,22 +204,13 @@ nav ul li {
 nav ul li a:hover {
   text-decoration: none;
   transform: scale(1.04);
-
 }
 
 ul li.selected {
   border-bottom: 2px solid #41b5c5;
-
-  /* padding: 6px 2px 0px 2px; */
 }
 
-/* .map-nav a {
-  padding: 0;
-  border: 0px;
-  border-radius: 1000px;
-  opacity: 1.0;
-  outline: 0px;
-} */
+
 
 input[type=text], textarea[type=text], select {
   border: 1px solid #ccc;
@@ -364,21 +355,31 @@ label {
   position: fixed;
   top: 50vh;
   left: 50vw;
-  margin-left: auto;
+  width: 420px;
   transform: translate(-50%, -50%);
-  max-width: 95vw;
-  flex-direction: row;
+  text-align: center;
+  /* max-width: 95vw; */
+  /* margin: 2rem 0px; */
+
+
   /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); */
 }
 
 .room {
-  min-width: 350px;
+  width: 420px;
+  /* max-width: 400px; */
   text-align: center;
   background-color: #642241;
   border: 2px solid #009778;
   color: #d4d656;
-  margin: auto;
-  max-width: 90vw;
+  /* margin: auto; */
+  margin-top: auto;
+  margin-bottom: auto;
+  /* max-width: 90vw; */
+}
+
+.room-link {
+  font-size: 110%;
 }
 
 
