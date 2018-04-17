@@ -19,7 +19,6 @@ class AdminEvents extends Component {
       return fetch(url)
           .then(response => response.json())
           .then(dataGrab)
-          .then(console.log("hey bitch"))
           .catch()
   }
 

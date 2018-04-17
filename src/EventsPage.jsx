@@ -32,7 +32,7 @@ class EventsPage extends Component {
         {dataObj.sort(function(a, b) {
           let aMonth = a.month.toLowerCase().substring(0,3);
           let bMonth = b.month.toLowerCase().substring(0,3);
-          if (aMonth == bMonth) {
+          if (aMonth === bMonth) {
             return a.day - b.day
           }
           return months.indexOf(aMonth) - months.indexOf(bMonth)
