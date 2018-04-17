@@ -127,6 +127,11 @@ a.navbar-brand img {
   width: 100vw;
 }
 
+.btn-sm {
+  margin: 1rem 0 0 4px;
+  float: right;
+}
+
 .map-button {
   font-size: 80%;
   /* width: 33%; */

@@ -64,55 +64,41 @@ class EventsPage extends Component {
                   </div>
                   <div className="grid-cell">
                     <h2 className="title">{eventInfo.title}</h2>
-                    <p className="time">{eventInfo.time}</p>
-                    <span className="category">{eventInfo.category}</span>
-                  </div>
-                  <div>
-                    <a
-                      className="event-page-button"
-                      target="_blank"
-                      href={eventInfo.registerUrl}
-                    >
-                      Register Here
-                    </a>
+                    <p className="time">
+                      {eventInfo.time}
+                      <br className="short"></br>
+                      <span>{eventInfo.category}</span>
+                    </p>
                   </div>
                 </div>
-                <hr />
+                <br></br>
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
-                    <h4>Event Description</h4>
-                    <p className="details">{eventInfo.description}</p>
+                  <a target="_blank" href={eventInfo.registerUrl} class="btn btn-sm btn-outline-info">register here</a>
+                    <h4>
+                      {eventInfo.location}
+                    </h4>
+
+                    <hr></hr>
+                    <div className="address">
+                      <span>1644 Platte Street</span>
+                      <span>Denver, CO 80202</span>
+                      <br></br>
+
+                    </div>
                   </div>
                 </div>
                 <hr className="short" />
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
-                    <div className="address">
-                      <a target="_blank" href={eventInfo.locationUrl}>
-                        {eventInfo.location}
-                      </a>
-                      <p>1644 Platte Street</p>
-                      <p>Denver, CO 80202</p>
-                      <p>Floor: {eventInfo.floor}</p>
-                      <p>Room: {eventInfo.room}</p>
-                    </div>
-                    <div>
-                      <a
-                        className="map-link event-page-button"
-                        href="/maps/${eventInfo.floor}"
-                      >
-                        Floor Map
-                      </a>
-                      <a
-                        className="map-link event-page-button"
-                        href="/maps/${eventInfo.room}"
-                      >
-                        Room Map
-                      </a>
-                    </div>
+                    <p className="details">
+                      {eventInfo.description}
+                      <br></br>
+                      <a href="/maps" className="btn btn-outline-secondary btn-sm">Floor Map</a>
+                      <a href="/maps" className="btn btn-outline-secondary btn-sm">Directions</a>
+                    </p>
                   </div>
                 </div>
-                <hr className="short" />
               </div>
             );
           })}
