@@ -25,8 +25,8 @@ class MapsPage extends Component {
 
 
   getRooms() {
-    const roomsUrl = "http://localhost:3000/rooms"
-    // const roomsUrl = "https://g-events-api.herokuapp.com/rooms"
+    // const roomsUrl = "http://localhost:3000/rooms"
+    const roomsUrl = "https://g-events-api.herokuapp.com/rooms"
     let dataGrab = (response) => {
       this.setState({roomsData: response.rooms});
     };
