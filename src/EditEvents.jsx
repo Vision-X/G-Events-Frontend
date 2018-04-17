@@ -39,8 +39,8 @@ class EditEvents extends Component {
     })
       .then(response => response.json())
       .then(response => {
-        let message = document.querySelector("#message");
-        message.textContent = "Your update was SUCKsessful!";
+        let message = document.querySelector(".message");
+        message.textContent = "Your update was successful!";
         setTimeout(() => {
           message.textContent = "";
         }, 4000);
@@ -193,7 +193,7 @@ class EditEvents extends Component {
                       />
                       <input id="update" type="submit" value="Update Event" />
                       <input id="delete" type="submit" value="Delete Event" />
-                      <p id="message" />
+                      <p className="message" />
                     </form>
                   </div>
                 </div>
