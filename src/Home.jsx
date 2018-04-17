@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import EventButton from './EventButton.jsx';
-import MapButton from './MapButton.jsx';
+import React, { Component } from "react";
+import EventButton from "./EventButton.jsx";
+import MapButton from "./MapButton.jsx";
 
 class Home extends Component {
   render() {
@@ -9,8 +9,8 @@ class Home extends Component {
         <EventButton />
         <MapButton />
       </div>
-    )
+    );
   }
-};
+}
 
 export default Home;
