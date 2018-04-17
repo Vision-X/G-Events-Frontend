@@ -68,7 +68,7 @@ class InputForm extends Component {
                             <label>Month:</label>
                             <input id="month"ref={(input) => this.month = input} type="text" name="Month" />
                             <label>Day:</label>
-                            <input id="day" ref={(input) => this.day = input} type="text" Name="Day" />
+                            <input id="day" ref={(input) => this.day = input} type="text" name="Day" />
                             <label>Event Title:</label>
                             <input id="title" ref={(input) => this.title = input} type="text" name="Event Title" />
                             <label>Registration URL:</label>

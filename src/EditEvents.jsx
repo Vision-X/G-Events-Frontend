@@ -62,6 +62,7 @@ class EditEvents extends Component {
 
   _onClick(e) {
     e.preventDefault();
+    console.log(e.target.tagName);
     if (e.target.id === "update") {
       let theId = e.target.parentNode.querySelector(".event-id").value;
       let daData = this.getFormData(e);
@@ -94,14 +95,14 @@ class EditEvents extends Component {
           .sort(function(a, b) {
             let aMonth = a.month.toLowerCase().substring(0, 3);
             let bMonth = b.month.toLowerCase().substring(0, 3);
-            if (aMonth == bMonth) {
+            if (aMonth === bMonth) {
               return a.day - b.day;
             }
             return months.indexOf(aMonth) - months.indexOf(bMonth);
           })
           .map(eventInfo => {
             return (
-              <div className="event-detail-card content event-form">
+              <div key={eventInfo.title.length + eventInfo.day} className="event-detail-card content event-form">
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
                     <h1>DB Event</h1>
@@ -114,7 +115,7 @@ class EditEvents extends Component {
                       <input
                         className="event-id"
                         ref={input => (this.id = input)}
-                        type="text"
+                        type="text" readOnly
                         value={eventInfo.id}
                       />
                       <label>Month:</label>
@@ -199,7 +200,8 @@ class EditEvents extends Component {
                 </div>
               </div>
             );
-          })}
+          })
+        }
       </div>
     );
   }

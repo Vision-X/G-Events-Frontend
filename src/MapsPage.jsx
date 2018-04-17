@@ -105,30 +105,24 @@ class MapsPage extends Component {
       this.state.selectedFloorRooms.forEach((room) => {
         // console.log(roomId);
         // console.log(room.id)
-
-        if (room.id == roomId) {
-
-
+        if (room.id === roomId) {
           this.setState({selectedPortraitMap: room.roomMapPortraitUrl})
           this.setState({selectedLandscapeMap: room.roomMapLandscapeUrl})
           console.log(room.roomMapPortraitUrl)
         }
       })
       // return this.setState({selectedRoom})
-
     }
   }
 
   render() {
     return (
       <div>
-
         {
           (window.location.pathname !== "/maps") ?
             (this.getMapFromUrl(window.location.pathname)) :
             null
         }
-
         <ToggleDisplay show={!this.state.selectedPortraitMap}>
           <div>
             <div className="landing-btns mx-auto">

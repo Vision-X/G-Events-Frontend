@@ -28,7 +28,7 @@ class AddEvents extends Component {
             <div>
                 {this.state.eventData.map(eventInfo => {
                     return (
-                        <div className="event-detail-card content event-form">
+                        <div key={eventInfo.day + eventInfo.title.length + 100} className="event-detail-card content event-form">
                             <div className="grid grid--gutters title-block">
                                 <div className="event-detail-block">
                                     <h1>Galvanize Events</h1>
