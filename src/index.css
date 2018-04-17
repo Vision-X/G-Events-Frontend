@@ -1,3 +1,7 @@
+:root {
+  font-size: 1rem;
+}
+
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -16,6 +20,10 @@ header {
 }
 
 @media only screen and (max-width: 720px) {
+  :root {
+    font-size: 0.8rem;
+  }
+
   header {
     position: absolute;
   }
@@ -129,7 +137,7 @@ a.navbar-brand img {
 
 .btn-sm {
   margin: 1rem 0 0 4px;
-  float: right;
+  float: left;
 }
 
 .map-button {
@@ -188,7 +196,7 @@ button.floors:active {
 .event-detail-card {
   border: 2px solid #d4d656;
   margin: 1rem 10%;
-  max-width: 80%;
+  width: 80%;
   padding: 1rem 1rem;
   background-color: #fefeff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -277,11 +285,19 @@ label {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.20);
 }
 
-.grid-cell {
+/* .grid-cell {
   display: block;
   -webkit-box-flex: 1;
   flex: 1;
-  padding-left: 2em;
+  padding-left: 1rem;
+} */
+
+div.grid-cell {
+  padding: 1rem;
+}
+
+.location-block div.grid-cell {
+  /* border: 2px solid #009778; */
 }
 
 .month {
@@ -335,9 +351,58 @@ label {
 }
 
 @media all and (max-width: 658px) {
+  :root {
+    font-size: 0.6rem;
+  }
+
   .btn-group {
     margin-top: 82px;
   }
+
+  .box {
+    height: 64px;
+    width: 64px;
+  }
+
+  h6.day {
+    font-size: 3rem;
+  }
+
+  .btn.btn-sm.btn-outline-info {
+    margin: 0;
+  }
+
+  .event-detail-card.content:first-child {
+    margin-top: 14rem;
+  }
+
+  .event-detail-card {
+    margin: 1rem 3%;
+    width: 94%;
+  }
+
+  .grid.grid--gutters.location-block,
+  .detail-block .grid-cell {
+    border-top: 1px solid #ccc7ca;
+  }
+
+  .title-block {
+    height: 18vh;
+  }
+
+  .title-block .grid-cell {
+    padding-top: 0;
+  }
+
+  .btn.btn-sm.btn-outline-info {
+    margin-top: 1rem;
+  }
+
+  .btn.btn-sm.btn-outline-secondary {
+    margin: 1rem 4px 0 0;
+  }
+
+
 }
 
 /* display portrait -1000px wide and lanscape +1000 wide */

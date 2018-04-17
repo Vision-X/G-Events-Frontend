@@ -74,21 +74,18 @@ class EventsPage extends Component {
                 <br></br>
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
-                  <a target="_blank" href={eventInfo.registerUrl} class="btn btn-sm btn-outline-info">register here</a>
                     <h4>
                       {eventInfo.location}
                     </h4>
-
-                    <hr></hr>
                     <div className="address">
                       <span>1644 Platte Street</span>
                       <span>Denver, CO 80202</span>
                       <br></br>
+                      <a target="_blank" href={eventInfo.registerUrl} class="btn btn-sm btn-outline-info">register here</a>
 
                     </div>
                   </div>
                 </div>
-                <hr className="short" />
                 <div className="grid grid--gutters detail-block">
                   <div className="grid-cell">
                     <p className="details">
