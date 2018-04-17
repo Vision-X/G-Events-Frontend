@@ -28,7 +28,7 @@ class EventsPage extends Component {
       <div id="map-page">
           {this.state.data.map(eventInfo => {
             return (
-              <div id={eventInfo.id} className="event-detail-card content">
+              <div id={eventInfo.id} key={eventInfo.id} className="event-detail-card content">
                 <div className="grid grid--gutters title-block">
                   <div className="event-detail-block">
                     <div className="box">
@@ -40,22 +40,26 @@ class EventsPage extends Component {
                     <h2 className="title">{eventInfo.title}</h2>
                     <p className="time">
                       {eventInfo.time}
-                      <hr className="short"></hr>
+                      <br className="short"></br>
                       <span>{eventInfo.category}</span>
                     </p>
                   </div>
                 </div>
-                <hr></hr>
+                <br></br>
                 <div className="grid grid--gutters location-block">
                   <div className="grid-cell">
-                    <p className="address">
-                      <h4>
-                        {eventInfo.location}
-                      </h4>
-                      <p>1644 Platte Street</p>
-                      <p>Denver, CO 80202</p>
-                      <span><a target="_blank" href={eventInfo.registerUrl}>register here</a></span>
-                    </p>
+                  <a target="_blank" href={eventInfo.registerUrl} class="btn btn-sm btn-outline-info">register here</a>
+                    <h4>
+                      {eventInfo.location}
+                    </h4>
+
+                    <hr></hr>
+                    <div className="address">
+                      <span>1644 Platte Street</span>
+                      <span>Denver, CO 80202</span>
+                      <br></br>
+
+                    </div>
                   </div>
                 </div>
                 <hr className="short"></hr>
@@ -63,8 +67,10 @@ class EventsPage extends Component {
                   <div className="grid-cell">
                     <p className="details">
                       {eventInfo.description}
-                      <a href="/map/L4">4th Floor </a>
-                    <a href="/map/2">Picachu - Room Directions</a></p>
+                      <br></br>
+                      <a href="/maps" className="btn btn-outline-secondary btn-sm">Floor Map</a>
+                      <a href="/maps" className="btn btn-outline-secondary btn-sm">Directions</a>
+                    </p>
                   </div>
                 </div>
               </div>
