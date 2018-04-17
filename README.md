@@ -1,5 +1,7 @@
 # Project: G-Events Locator
 
+## Deployment
+
 Back-End: http://g-events-api.herokuapp.com
 
 App: https://g-events-locator.firebaseapp.com
