@@ -167,6 +167,7 @@ button.floors-lg {
 .navbar {
   background-color: #003B4C;
   color: #F79020;
+  justify-content: space-around !important;
 }
 
 button.landing:active,

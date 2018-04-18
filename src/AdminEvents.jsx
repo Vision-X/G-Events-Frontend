@@ -29,7 +29,7 @@ class AdminEvents extends Component {
   render() {
     return (
       <div>
-        <h1 class="admin-heading">Events Admin Panel</h1>
+        <h1 className="admin-heading">Events Admin Panel</h1>
         <div>
           <EventForm />
         </div>
