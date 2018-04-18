@@ -25,9 +25,7 @@ class EditEvents extends Component {
 
   updateEventData(daData, theId) {
     let myData = JSON.stringify(daData);
-    console.log(myData);
     let thisId = theId;
-    console.log(thisId);
     let updateUrl = `https://g-events-api.herokuapp.com/events/${thisId}`;
     fetch(updateUrl, {
       method: "PUT",
@@ -62,7 +60,6 @@ class EditEvents extends Component {
 
   _onClick(e) {
     e.preventDefault();
-    console.log(e.target.tagName);
     if (e.target.id === "update") {
       let theId = e.target.parentNode.querySelector(".event-id").value;
       let daData = this.getFormData(e);
