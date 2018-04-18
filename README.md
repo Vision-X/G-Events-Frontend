@@ -95,8 +95,10 @@ Jasen: good eye for design and UX, strengths in back-end; down to get out of com
 
 4. Establish discussion protocol:
     * Eveyone has a chance to propose an idea, without interruption.
+    
+### Workflow
 
-5. Collect map images
+Jasen: Build the scraper and express server with api end-points for events and rooms.
 
 ### Goals
 
