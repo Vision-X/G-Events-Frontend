@@ -34,9 +34,12 @@ A Galvanize Events Application - that allows the user to see a list of upcoming 
         - Displays a list of events from the Galvanize website with an add button next to each event, by clicking add will add the event to the app's db.
         - Also has add a new event link, by clicking on this will open an add event form, with save button.
 
-## License
 
-MIT @2018
+## Installation/Set-up
+
+1. Fork/Clone this repository to your local machine.
+1. Run `npm install` to download the project dependencies.
+1. Run `npm start` to run locally, defaults to http://localhost:3000/ .
 
 ## Team
 
@@ -49,6 +52,10 @@ MIT @2018
 -- Owen Black (https://github.com/ohblack5280)
 
 -- Roberto Santos (https://github.com/soundmedicine)
+
+## License
+
+MIT @2018
 
 ## Technologies
 
