@@ -100,6 +100,11 @@ Jasen: good eye for design and UX, strengths in back-end; down to get out of com
 4. Establish discussion protocol:
     * Eveyone has a chance to propose an idea, without interruption.
 
+
+### Workflow
+
+Jasen: Build the scraper and express server with api end-points for events and rooms.
+
 ### Goals
 
 1. Working Landing Page (per Phase 1)
@@ -146,7 +151,10 @@ Milo and Owen: Pair program front-end
 
 Roberto: finish migrating and seeding Rooms, work on rooms routes
 
-Jasen: update events queries and troubleshoot events routes
+Jasen: update events queries and troubleshoot events routes, edit and create maps, styled the site. Build maps page implement logic to change maps on selection. Create template replit for all crud routes, so Milo and Marlow could implement into the admin events pages.
+https://repl.it/@jasenmichael/g-event-post
+https://repl.it/@jasenmichael/g-event-delete
+https://repl.it/@jasenmichael/g-event-put
 
 Marlow: work on CRUD froms
 
@@ -185,9 +193,22 @@ Owen: write tests
 
 Marlow: getting POST request to work
 
-Jasen: working on Maps-Rooms page
+Jasen: style site, build Maps-Rooms page, create maps for each room, create demo video for slideshow presentation.
 
 ## Day 5
+
+
+### Workflow
+
+Milo: working on getting data from the forms and activating buttons in react framework
+
+Roberto: write presentation content.
+
+Owen: create images for slideshow.
+
+Jasen: create slideshow presentation.
+
+
 
 ### To Do's
 
