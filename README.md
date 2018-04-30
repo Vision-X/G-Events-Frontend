@@ -6,43 +6,49 @@ Back-End: http://g-events-api.herokuapp.com
 
 App: https://g-events-locator.firebaseapp.com
 
-## GitHub Workflow
 
-Individual branches:
+## Demo
 
-- git checkout -b MM-my-branch
+[Demo Video](http://jmh-g-events-slide.surge.sh/g-events-demo-2.2.mp4)
 
-- git push and commit to this branch
+## Description
 
-- make a pull request, slack a team member to merge
+A Galvanize Events Application - that allows the user to see a list of upcoming events with detailed information and directions to the event. The application has a floor map of all rooms with directions. Event admins may add and edit information such as event room location. With G-Events Locator, attendees can see a list of upcoming events, see the event details and have options to get directions to the venue as well as find the specific room/directions at that location - all from one app. Navigating G-Events has never been easier!
 
-- slack team after merge, update master
+## Features
 
-Deleting a branch:
+- The user is greeted with the G-Events page, this page will have an "events" button, and a "map" button.
+- there is an admin page located at /admin
 
-- git branch -d MM-my-branch
+  Events link:
+    - When the user clicks on the "events" button they will be redirected to a page with a list of upcoming events at the Platte Campus.
+    - When a user clicks on an event, information is displayed, and a link to the the floor map with directions to the event room.
 
-Changing branches:
+  Maps link:
+    - When the user clicks on the map link, they are prompted to select a floor and room, a map is then displayed with directions to the selected room.
 
-- git checkout MM-branch-name
+  Admin Page:
+    - Shows a list of Events with edit and delete button for each event, plus an "add events" link at the bottom of the list.
+      - Edit button allows to edit the event and save to the database
+      - Add events link
+        - Displays a list of events from the Galvanize website with an add button next to each event, by clicking add will add the event to the app's db.
+        - Also has add a new event link, by clicking on this will open an add event form, with save button.
 
-Show Branches:
+## License
 
-- git branch
-
-
+MIT @2018
 
 ## Team
 
--- Jasen Hill
+-- Jasen Hill (https://github.com/jasenmichael)
 
--- Michael Marlow
+-- Michael Marlow (https://github.com/Vision-X)
 
--- Michael Smith
+-- Michael Smith (https://github.com/newcodesmith)
 
--- Owen Black
+-- Owen Black (https://github.com/ohblack5280)
 
--- Roberto Santos
+-- Roberto Santos (https://github.com/soundmedicine)
 
 ## Technologies
 
@@ -64,9 +70,7 @@ Show Branches:
 
 5) Cheerio.js
 
-## Summary
-
-deployed at https://g-events-locator.firebaseapp.com/
+---
 
 # Daily Agenda
 
@@ -91,11 +95,10 @@ Jasen: good eye for design and UX, strengths in back-end; down to get out of com
 2. Landing page, marrying components
 
 3. Review back-end code
-    *Intro to Cheerio
+    * Intro to Cheerio
 
 4. Establish discussion protocol:
     * Eveyone has a chance to propose an idea, without interruption.
-    * 
 
 ### Goals
 
@@ -113,7 +116,7 @@ Jasen: Take a look at scope for backend, try pair-programming. Create migration 
 
 Marlow: Down for a code-along for setting up the database. Get map basics up and build on that. We need to do more pair-programming; open to tearing down the app and starting over.
 
-Owen: We need to be more Agile to accomplish the goal of this group experience. More collaboration. 
+Owen: We need to be more Agile to accomplish the goal of this group experience. More collaboration.
 
 Milo: Open to anything. Frustrated about workflow seeming exclusive to one or two people, communication, roles.
 
@@ -209,4 +212,3 @@ Jasen: working on Maps-Rooms page
 4. Smoothing out the GitHub workflow
 
 5. Using Google Maps library in React
-
